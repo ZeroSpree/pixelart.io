@@ -45,9 +45,13 @@
     ga('create', '{{site.ga_id}}', 'auto');
     ga('send', 'pageview');
 </script>
+
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script>
-    {% include js/sharer.js %}
-    {% include js/pagination.js %}
-    {% include js/updateurl.js %}
-</script>
+
+{% if jekyll.environment == 'production' %}
+    <script>{% include assets/js/app.min.js %}</script>
+{% else %}
+    <script src="assets/js/sharer.js"></script>
+    <script src="assets/js/pagination.js"></script>
+    <script src="assets/js/updateurl.js"></script>
+{% endif %}
