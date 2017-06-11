@@ -1,0 +1,23 @@
+.posts-featured {
+    margin-bottom: 20px;
+}
+
+.posts-featured__title {
+    color: #4f4c3f;
+    font-size: 13px;
+    display: block;
+}
+
+.posts-featured__title:hover {
+    color: #32c4d9;
+}
+
+.posts-featured__headline {
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.posts-featured__date {
+    white-space: nowrap;
+    font-size: 14px;
+}

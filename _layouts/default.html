@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html 
+lang="{{ page.lang | default: site.lang | default: "en" }}"
+{% if page.layout == 'post' %}itemscope itemtype="http://schema.org/Article"{% endif %}
+>
+    {% include head.html %}
+
+    <body>
+        {% include header.html %}
+
+        <main role="main">
+            <div class="grid">
+                {% include sidebar.html %}
+                <div class="main-column">
+                    <section id="stream" 
+                             data-pagination-current-page="1" 
+                             data-pagination-path="{% if page.pagination-path %}{{page.pagination-path}}{% else %}home{% endif %}">
+                        {{ content }}
+                    </section>
+
+                    <div class="posts posts-placeholder">
+                        <div class="posts__placeholder posts__placeholder--meta"></div>
+                        <div class="posts__placeholder posts__placeholder--headline"></div>
+                        <div class="posts__placeholder posts__placeholder--splash"></div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        {% include footer.html %}
+    </body>
+</html>

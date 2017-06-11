@@ -1,0 +1,62 @@
+{% capture metaDescription %}
+    {% if page.excerpt %}
+        {{ page.excerpt }}
+    {% else %}
+        {{ site.description }}
+    {% endif %}
+{% endcapture %}
+{% assign metaDescription = {{metaDescription | normalize_whitespace | strip_html | truncate: 160 | escape}} %}
+{% capture metaTitle %}{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% endcapture %}
+{% capture metaImage %}{% if page.splash %}{{ page.splash }}{% else %}{{ site.splash }}{% endif %}{% endcapture %}
+{% capture pageURL %}{{ page.url | replace:'index.html','' | absolute_url }}{% endcapture %}
+
+<!-- TODO
+add site.splash
+amp canonical
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <title>{{ metaTitle }}</title>
+    <meta name="description" content="{{ metaDescription | normalize_whitespace }}">
+
+    <meta property="og:url" content="{{ pageURL }}">
+    <meta property="og:type" content="website">
+    <meta property="fb:admins" content="{{site.facebook_admin}}"/>
+    <meta property="fb:app_id" content="{{site.facebook_appid}}"/>
+    <meta property="og:title" content="{{ metaTitle }}">
+    <meta property="og:description" content="{{ metaDescription | normalize_whitespace }}">
+    <meta property="og:site_name" content="PixelArt.io">
+    <meta property="og:image" content="{{ metaImage }}">
+    <meta property="og:image:width" content="480" />
+    <meta property="og:image:height" content="360" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pixelartIO">
+    <meta name="twitter:url" content="{{ pageURL }}">
+    <meta name="twitter:title" content="{{ metaTitle }}">
+    <meta name="twitter:description" content="{{ metaDescription | normalize_whitespace }}">
+    <meta name="twitter:image" content="{{ metaImage }}">
+    <meta name="twitter:image:src" content="{{ metaImage }}">
+
+    {% if page.layout == 'post' %}
+    <meta name="twitter:creator" content="@{{site.twitter_username}}">
+    <meta property="og:type" content="article" />
+    <meta itemprop="name" content="{{ metaTitle }}">
+    <meta itemprop="description" content="{{ metaDescription | normalize_whitespace }}">
+    <meta itemprop="image" content="{{ metaImage }}">
+    {% endif %}
+    <link rel="canonical" href="{{pageURL}}">
+    <link rel="amphtml" href="{{site.url}}/amp{{ page.url | replace:'index.html','' | relative_url }}">
+
+    {% if jekyll.environment == 'production' %}
+    <style>{% include /css/core.min.css %}</style>
+    {% else %}
+    <link rel="stylesheet" href="/assets/css/core.css">
+    {% endif %}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Lora:400,700" rel="stylesheet">
+</head>

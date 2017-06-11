@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% assign urlProcessed = true %}
+{% include posts.html %}
+
+{% assign urlProcessed = false %}
+{% assign currentPostUrl = page.url %}
+{% for page in site.posts %}
+    {% if forloop.index < 11 %}
+        {% if currentPostUrl != page.url %}
+            {% include posts.html %}
+        {% endif %}
+    {% endif %}
+{% endfor %}

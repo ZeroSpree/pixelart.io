@@ -1,0 +1,103 @@
+body, html {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+/*GENERAL*/
+.grid {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1180px;
+    overflow: hidden;
+}
+
+.main-column {
+    width: 100%;
+    margin-left: -340px;
+    padding-left: 340px;
+    float: left;
+    box-sizing: border-box;
+}
+.secondary-column {
+    display: block;
+    float: right;
+    width: 300px;
+}
+
+.horizontal-list {
+    font-size: 0;
+}
+.image {
+    background-color: #000;
+    background-image: url('/assets/img/default-avatar.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.image-overlay::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: -moz-linear-gradient(top,rgba(0,0,0,0) 20%,rgba(0,0,0,0.9) 100%);
+    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 20%,rgba(0,0,0,0.9) 100%);
+    background: -o-linear-gradient(top,rgba(0,0,0,0) 20%,rgba(0,0,0,0.9) 100%);
+    background: -ms-linear-gradient(top,rgba(0,0,0,0) 20%,rgba(0,0,0,0.9) 100%);
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 20%,rgba(0,0,0,0.9) 100%);
+}
+
+.ad--300x {
+    width: 300px;
+    min-height: 250px;
+    background: #FB971F;
+    margin-bottom: 40px;
+}
+.header {
+    padding: 7px 0px;
+    border-bottom: 1px solid #E1E1E1;
+}
+
+.header__logo {
+    vertical-align: middle;
+    margin-right: 50px;
+    display: inline-block;
+}
+
+.header__nav {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header__nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header__nav li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header__nav a {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+}
+
+.header__nav a.is-active,
+.header__nav a:hover {
+    color: #DD002A;
+}

@@ -1,0 +1,36 @@
+<header class="header" role="banner">
+    <div class="grid">
+        <a class="header__logo" href="{{ "/" | relative_url}}">
+            <span>P</span>IXELART
+        </a>
+
+        <nav class="header__nav">
+            <ul>
+            {% for my_page in site.pages %}{% if my_page.pagination_info.curr_page == 1 and my_page.anchortext and my_page.headernav %}
+                <li>
+                    <a href="{{ my_page.permalink }}" {% if page.anchortext == my_page.anchortext %}class="is-active"{% endif %}>{{ my_page.anchortext | escape }}</a>
+                </li>{% endif %}{% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<input type="checkbox" id="drawer-trigger" />
+
+<label class="btn--icon-hamburger" for="drawer-trigger"></label>
+
+<div class="drawer drawer--open">
+    <nav class="drawer__nav">
+        <ul>
+            <li>
+                <a href="{{ "/" | relative_url}}" {% if page.anchortext == my_page.anchortext %}class="is-active"{% endif %}>Home</a>
+            </li>
+        {% for my_page in site.pages %}{% if my_page.pagination_info.curr_page == 1 and my_page.anchortext %}
+            <li>
+                <a href="{{ my_page.permalink }}" {% if page.anchortext == my_page.anchortext %}class="is-active"{% endif %}>{{ my_page.anchortext | escape }}</a>
+            </li>{% endif %}{% endfor %}
+        </ul>
+    </nav>
+</div>
+
+<label class="drawer__overlay" for="drawer-trigger"></label>

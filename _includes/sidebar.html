@@ -1,0 +1,24 @@
+<div class="secondary-column sidebar">
+    <h3 class="secondary-headline">Featured Pixels</h3>
+    {% for post in site.posts %}{% for cat in post.categories %}{% if cat == 'featured' %}{% include posts-featured.html %}{% endif %}{% endfor %}{% endfor %}
+
+    <h3 class="secondary-headline">Follow PixelArt</h3>
+    <iframe
+        src="https://platform.twitter.com/widgets/follow_button.html?screen_name={{site.twitter_username}}&show_screen_name=false&show_count=false&size=0"
+        width="80"
+        height="30"
+        sandbox="allow-scripts allow-same-origin allow-popups" 
+        class="sidebar__twitter-follow"
+        scrolling="no" 
+        >
+    </iframe>
+    <iframe 
+        src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2F{{site.facebook_username}}%2F&width=50&layout=button&action=like&size=small&show_faces=false&share=false&height=65&appId={{site.facebook_appid}}" 
+        width="50" 
+        height="65" 
+        sandbox="allow-scripts allow-same-origin allow-popups" 
+        class="sidebar__facebook-follow"
+        scrolling="no" 
+        frameborder="0">
+    </iframe>
+</div>

@@ -1,0 +1,69 @@
+<article class="posts {% for category in page.categories %}posts--{{ category | escape }} {% endfor %}"
+         data-url="{{ page.url | absolute_url }}"
+         data-relurl="{{ page.url | relative_url }}"
+         data-splash="{% if page.splash %}{{ page.splash }}{% else %}{{ site.splash }}{% endif %}"
+         data-url-processed="{{urlProcessed}}">
+
+    <div class="posts__header">
+        <div class="posts__meta">
+            <div class="posts__meta-category">
+                {% for category in page.categories %}
+                {% if category != 'featured' %}
+                <a class="posts__meta-category-link" href="/{{ category }}/">{{ category | escape }}</a>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <span class="posts__date">{{ page.date | date_to_string }}</span>
+        </div>
+
+        <a class="posts__title" href="{{ page.url | relative_url }}">
+            <h2 class="posts__headline js--title">{{ page.title | escape }}</h2>
+        </a>
+
+        {% if page.splash %}
+        <div class="posts__splash">
+            <img class="posts__splash-img" src="/assets/posts_img/{{ page.splash }}" alt="{{ page.title | escape }}" />
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="posts__body">
+        {{ page.content }}
+    </div>
+
+    <div class="posts__footer">
+        <ul class="posts__sharebar">
+            <li>
+                <a class="js-sharer icon-facebook" data-service="Facebook" href="javascript:;" title="Share on Facebook">
+                    <svg class="icon"><use xlink:href="#icon-facebook"></use></svg>
+                </a>
+            </li>
+            <li>
+                <a class="js-sharer icon-twitter" data-service="Twitter" href="javascript:;" title="Tweet">
+                    <svg class="icon"><use xlink:href="#icon-twitter"></use></svg>
+                </a>
+            </li>
+            <li>
+                <a class="js-sharer icon-google-plus" data-service="Google+" href="javascript:;" title="Share on Google+">
+                    <svg class="icon"><use xlink:href="#icon-google-plus"></use></svg>
+                </a>
+            </li>
+            <li>
+                <a class="js-sharer icon-tumblr" data-service="Tumblr" href="javascript:;" title="Post to Tumblr">
+                    <svg class="icon"><use xlink:href="#icon-tumblr"></use></svg>
+                </a>
+            </li>
+            <li>
+                <a class="js-sharer icon-pinterest" data-service="Pinterest" href="javascript:;" title="Pin it">
+                    <svg class="icon"><use xlink:href="#icon-pinterest2"></use></svg>
+                </a>
+            </li>
+            <li>
+                <a class="js-sharer icon-reddit" data-service="Reddit" href="javascript:;" title="Submit to Reddit">
+                    <svg class="icon"><use xlink:href="#icon-reddit"></use></svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</article>

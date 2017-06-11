@@ -1,0 +1,14 @@
+{% assign sectionName = (page.anchortext | downcase) %}
+
+{% for page in paginator.posts %}
+
+    {% for cat in page.categories %}
+        {% assign catName = (cat | downcase) %}
+        {% if catName == sectionName %}
+
+            {% include posts.html %}
+
+        {% endif %}
+    {% endfor %}
+
+{% endfor %}
