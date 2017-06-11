@@ -1,26 +1,15 @@
 $(function(){
 
-    var $win = $(window);
+    var $win = $(window),
+        timer = -1;
 
-    // http://stackoverflow.com/questions/3701311/event-when-user-stops-scrolling
-    $.fn.scrollEnd = function(callback, timeout) {
-        $(this).scroll(function(){
-            var $this = $(this);
-            if ($this.data('scrollTimeout')) {
-                clearTimeout($this.data('scrollTimeout'));
-            }
-            $this.data('scrollTimeout', setTimeout(callback,timeout));
-        });
-    };
-
-    $win.scrollEnd( function() {
-
+    function updateUrl() {
         $.each( $('#stream .posts'), function(){
             var $t             = $(this),
                 url            = $t.attr('data-relurl'),
                 urlProcessed   = $t.attr('data-url-processed'),
                 tOffsetTop     = $t.offset().top,
-                tOffsetBottom  = tOffsetTop + $t.outerHeight(),
+                tOffsetBottom  = tOffsetTop + $t.height(),
                 winTop         = $win.scrollTop(),
                 winHeight      = $win.height(),
                 winBottom      = winTop + winHeight,
@@ -39,6 +28,11 @@ $(function(){
                 }
             }
         });
+    }
 
-    }, 100);
+    $win.scroll(function() {
+        if(timer != -1) clearTimeout(timer);
+        timer = setTimeout(updateUrl, 150);
+    }, false);
+
 });
