@@ -10,19 +10,13 @@ $(function(){
         scrollTreshold;
 
     function checkDuplicates () {
-        var $posts = $streamContainer.find('.posts');
         var postsArray = [];
 
-        $.each( $posts, function () {
+        $.each( $streamContainer.find('.posts'), function () {
             var $t = $(this),
                 url = $t.attr('data-url');
 
-            if( postsArray.indexOf(url) > -1 ) {
-                console.log('duplicate', url)
-                $t.remove();
-            } else {
-                postsArray.push(url);
-            }
+            if( postsArray.indexOf(url) > -1 ? $t.remove() : postsArray.push(url);
         });
     }
 
