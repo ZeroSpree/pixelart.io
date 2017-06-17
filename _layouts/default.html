@@ -14,7 +14,7 @@ lang="{{ page.lang | default: site.lang | default: "en" }}"
                 <div class="main-column">
                     <section id="stream" 
                              data-pagination-current-page="1" 
-                             data-pagination-path="{% if page.pagination-path %}{{page.pagination-path}}{% else %}home{% endif %}">
+                             data-pagination-path="{% if page.permalink %}{{page.permalink}}{% else %}/home/{% endif %}">
                         {{ content }}
                     </section>
 

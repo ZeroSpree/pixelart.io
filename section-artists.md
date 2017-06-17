@@ -4,8 +4,8 @@ title: Pixel Art Artists
 anchortext: Artists
 permalink: /artists/
 headernav: true
-pagination-path: artists
-pagination: 
-  enabled: true
-  category: artists
+#pagination-path: artists
+#pagination: 
+#  enabled: true
+#  category: artists
 ---

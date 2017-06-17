@@ -2,6 +2,11 @@
 layout: default
 ---
 
-{% for page in paginator.posts %}
-    {% include posts.html %}
+{% assign posts_limit = 0 %}
+
+{% for page in site.posts %}
+    {% if posts_limit < site.pagination.per_page %}
+        {% assign posts_limit = posts_limit | plus: 1 %}
+        {% include posts.html %}
+    {% endif %}
 {% endfor %}

@@ -16,7 +16,7 @@ $(function(){
             // interrupt pagination requests until current one is fulfilled
             processRequest    = false;
             requestPage       = parseInt( $streamContainer.attr('data-pagination-current-page') ) + 1;
-            paginationRequest = '/pagination/'+ paginationPath +'/page/'+ requestPage +'/index.html';
+            paginationRequest = '/pagination'+ paginationPath +'page/'+ requestPage +'/index.html';
 
             $.ajax({
                 url: paginationRequest,
