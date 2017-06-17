@@ -1,8 +1,7 @@
 ---
 layout: section_pagination
-permalink: /pagination/gif/
-anchortext: GIF
+permalink: /pagination/scenery/
 pagination: 
   enabled: true
-  category: gif
+  category: scenery
 ---

@@ -1,4 +1,4 @@
-{% assign sectionName = (page.anchortext | downcase) %}
+{% assign sectionName = (page.pagination.category | downcase) %}
 
 {% for page in paginator.posts %}
 

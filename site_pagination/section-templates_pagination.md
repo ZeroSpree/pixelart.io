@@ -1,8 +1,7 @@
 ---
 layout: section_pagination
-permalink: /pagination/logo/
-anchortext: Logo
+permalink: /pagination/templates/
 pagination: 
   enabled: true
-  category: logo
+  category: templates
 ---
