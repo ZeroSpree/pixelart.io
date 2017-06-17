@@ -9,6 +9,23 @@ $(function(){
         paginationRequest,
         scrollTreshold;
 
+    function checkDuplicates () {
+        var $posts = $streamContainer.find('.posts');
+        var postsArray = [];
+
+        $.each( $posts, function () {
+            var $t = $(this),
+                url = $t.attr('data-url');
+
+            if( postsArray.indexOf(url) > -1 ) {
+                console.log('duplicate', url)
+                $t.remove();
+            } else {
+                postsArray.push(url);
+            }
+        });
+    }
+
     $win.scroll(function() {
         scrollTreshold = $(document).height() - $win.height() - iTreshold;
 
@@ -28,6 +45,7 @@ $(function(){
                         .attr('data-pagination-current-page', requestPage);
 
                     processRequest = true;
+                    checkDuplicates();
 
                     ga('send', {
                         hitType: 'event',
