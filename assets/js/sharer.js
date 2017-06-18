@@ -1,5 +1,3 @@
----
----
 // TODO: check amp sharing functionality
 // TODO: move descriptions/text to global config
 

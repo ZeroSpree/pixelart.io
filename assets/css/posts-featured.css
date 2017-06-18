@@ -1,18 +1,15 @@
----
----
 .posts-featured {
     margin-bottom: 20px;
 }
 
 .posts-featured__title {
-    color: {{site.css_primary_color}};
+    color: #4f4c3f;
     font-size: 13px;
     display: block;
 }
 
 .posts-featured__title:hover {
-    margin: 100px;
-    color: {{site.css_secondary_color}};
+    color: #32c4d9;
 }
 
 .posts-featured__headline {
