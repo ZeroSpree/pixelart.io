@@ -31,7 +31,7 @@ baseurl: ""
 markdown: kramdown
 gems: 
   - jekyll-paginate-v2
-  - jekyll-minifier
+#  - jekyll-minifier
 exclude:
   - Gemfile
   - Gemfile.lock
