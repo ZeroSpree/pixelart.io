@@ -29,7 +29,9 @@ css_secondary_color: "#32c4d9"
 
 baseurl: "" 
 markdown: kramdown
-gems: [jekyll-paginate-v2]
+gems: 
+  - jekyll-paginate-v2
+  - jekyll-minifier
 exclude:
   - Gemfile
   - Gemfile.lock
