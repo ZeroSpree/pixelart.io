@@ -16,7 +16,7 @@ $(function(){
             var $t = $(this),
                 url = $t.attr('data-url');
 
-            if( postsArray.indexOf(url) > -1 ? $t.remove() : postsArray.push(url);
+            postsArray.indexOf(url) > -1 ? $t.remove() : postsArray.push(url);
         });
     }
 
