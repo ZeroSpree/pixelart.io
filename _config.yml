@@ -43,7 +43,6 @@ collections:
 
 sass:
     sass_dir: assets/_sass
-    style: :compressed
 
 ############################################################
 # Site configuration for the Jekyll 3 Pagination Gem
