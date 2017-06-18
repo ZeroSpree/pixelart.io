@@ -9,6 +9,7 @@
     background-size: 918px 500px;
     display: block;
 }
+
 @keyframes placeHolderShimmer{
     0% {
         background-position: -918px 0;
@@ -17,16 +18,19 @@
         background-position: 918px 0;
     }
 }
+
 .posts__placeholder--meta {
     margin-top: 8px;
     height: 10px;
     width: 25%;
 }
+
 .posts__placeholder--headline {
     height: 25px;
     width: 50%;
     margin: 60px 0 34px;
 }
+
 .posts__placeholder--splash {
     width: 100%;
     padding-top: 56.25%;

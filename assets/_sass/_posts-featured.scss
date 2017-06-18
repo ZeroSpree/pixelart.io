@@ -3,13 +3,13 @@
 }
 
 .posts-featured__title {
-    color: #4f4c3f;
+    color: $primary-color;
     font-size: 13px;
     display: block;
 }
 
 .posts-featured__title:hover {
-    color: #32c4d9;
+    color: $secondary-color;
 }
 
 .posts-featured__headline {
