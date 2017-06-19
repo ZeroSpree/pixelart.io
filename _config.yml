@@ -20,11 +20,6 @@ splash: image.jpg
 ga_id: UA-75349601-1
 
 ############################################################
-# Visual Settings
-css_primary_color: "#4f4c3f"
-css_secondary_color: "#32c4d9"
-
-############################################################
 # Build Settings
 
 baseurl: "" 
