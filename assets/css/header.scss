@@ -4,7 +4,7 @@
 @import "theme";
 
 .header {
-    background: #28261F;
+    background: $header-bg;
     position: fixed;
     top: 0;
     left: 0;
@@ -16,13 +16,13 @@
 
 .header__logo {
     display: inline-block;
-    color: #fff;
+    color: $header-logo;
     font-weight: 800;
     font-size: 32px;
     letter-spacing: -1px;
 }
 .header__logo span {
-    color: #32c4d9;
+    color: $header-logo-span;
 }
 
 .header__nav {
@@ -48,15 +48,18 @@
 
 .header__nav a {
     font-size: 13px;
-    color: #666;
+    color: $header-link;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: -.4px;
 }
 
-.header__nav a.is-active,
 .header__nav a:hover {
-    color: #fff;
+    color: $header-link-hover;
+}
+
+.header__nav a.is-active {
+    color: $header-link-active;
 }
 
 /*Hamburger Menu*/
@@ -72,17 +75,17 @@
 .btn--icon-hamburger::before {
     content: '';
     position: absolute;
-    background: #fff;
+    background: $header-hamburger;
     top: 50%;
     margin-top: -1px;
     left: 43%;
     width: 35%;
     height: 2px;
-    box-shadow: 0 -6px 0 #fff, 0 6px 0 #fff;
+    box-shadow: 0 -6px 0 $header-hamburger, 0 6px 0 $header-hamburger;
     transition: all 150ms;
 }
 .btn--icon-hamburger:hover::before {
-    box-shadow: 0 -4px 0 #fff, 0 4px 0 #fff;
+    box-shadow: 0 -4px 0 $header-hamburger, 0 4px 0 $header-hamburger;
 }
 
 /*Drawer*/
@@ -98,7 +101,7 @@
     top: 0;
     bottom: 0;
     z-index: 10001;
-    background-color: #fff;
+    background-color: $drawer-bg;
     overflow-y: auto;
     overflow-x: hidden;
     padding: 15px 20px 0;
@@ -113,14 +116,16 @@
 }
 .drawer__nav a {
     line-height: 40px;
-    color: #444;
+    color: $drawer-link;
     font-weight: 600;
     font-size: 14px;
     display: block;
 }
-.drawer__nav a:hover,
+.drawer__nav a:hover {
+    color: $drawer-link-hover;
+}
 .drawer__nav a.is-active {
-    color: #32c4d9;
+    color: $drawer-link-active;
 }
 
 .drawer__overlay {
@@ -131,7 +136,7 @@
     width: 100%;
     cursor: pointer;
     display: none;
-    background: rgba(0,0,0,.4);
+    background: $drawer-overlay-bg;
     z-index: 10000;
 }
 

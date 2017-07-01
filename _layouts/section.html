@@ -2,13 +2,13 @@
 layout: default
 ---
 
-{% assign sectionName = (page.anchortext | downcase) %}
+{% assign sectionName = page.anchortext | downcase %}
 {% assign posts_limit = 0 %}
 
 {% for page in site.posts %}
     {% if posts_limit < site.pagination.per_page %}
         {% for cat in page.categories %}
-            {% assign catName = (cat | downcase) %}
+            {% assign catName = cat | downcase %}
             {% if catName == sectionName %}
                 {% assign posts_limit = posts_limit | plus: 1 %}
                 {% include posts.html %}

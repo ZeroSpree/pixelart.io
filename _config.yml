@@ -24,7 +24,7 @@ ga_id: UA-75349601-1
 
 baseurl: "" 
 markdown: kramdown
-gems: 
+plugins: 
   - jekyll-paginate-v2
 #  - jekyll-minifier
 exclude:

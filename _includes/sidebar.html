@@ -1,6 +1,12 @@
 <div class="secondary-column sidebar">
     <h3 class="secondary-headline">Featured Pixels</h3>
-    {% for post in site.posts %}{% for cat in post.categories %}{% if cat == 'featured' %}{% include posts-featured.html %}{% endif %}{% endfor %}{% endfor %}
+    {% for post in site.posts %}
+        {% for cat in post.categories %}
+            {% if cat == 'featured' %}
+                {% include posts-featured.html %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
 
     <h3 class="secondary-headline">Follow PixelArt</h3>
     <iframe

@@ -1,2 +1,42 @@
-$primary-color: #4f4c3f;
-$secondary-color: #32c4d9;
+$site-bg: #eee;
+
+/*header*/
+$header-bg: #28261F;
+$header-logo: #fff;
+$header-logo-span: #32c4d9;
+$header-link: #666;
+$header-link-hover: #fff;
+$header-link-active: #fff;
+$header-hamburger: #fff;
+
+/*drawer*/
+$drawer-bg: #fff;
+$drawer-link: #444;
+$drawer-link-hover: #32c4d9;
+$drawer-link-active: #32c4d9;
+$drawer-overlay-bg: rgba(0,0,0,.4);
+
+/*sidebar*/
+$sidebar-title: #32c4d9;
+
+/*main posts*/
+$posts-category: #444;
+$posts-category-hover: #32c4d9;
+$posts-date: #c2c2c2;
+$posts-title: #4f4c3f;
+$posts-title-hover: #32c4d9;
+$posts-body: #222;
+$posts-body-link: #222;
+$posts-body-link-hover: #32c4d9;
+$posts-share-bg: #F0F0F0;
+$posts-share-hover-bg: #F0F0F0;
+$posts-share-icon: #4f4c3f;
+$posts-share-icon-hover: #32c4d9;
+
+/*featured posts*/
+$posts-featured-title: #4f4c3f;
+$posts-featured-title-hover: #32c4d9;
+
+/*palceholder posts*/
+$posts-placeholder-bg: #eee;
+$posts-placeholder-bg-anim: #ddd;

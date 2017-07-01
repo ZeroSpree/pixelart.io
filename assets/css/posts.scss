@@ -5,7 +5,7 @@
 
 .posts {
     width: 100%;
-    border: 1px solid #E8E8E8;
+    border: 1px solid rgba(0,0,0,.095);
     background: #fff;
     box-sizing: border-box;
     display: inline-block;
@@ -25,9 +25,13 @@
 }
 
 .posts__meta-category-link {
-    color: #444;
+    color: $posts-category;
     margin-right: 5px;
     text-transform: capitalize;
+}
+
+.posts__meta-category-link:hover {
+    color: $posts-category-hover;
 }
 
 .posts__meta-category-link:not(:last-child)::after {
@@ -35,19 +39,18 @@
 }
 
 .posts__date {
-    color: #c2c2c2;
+    color: $posts-date;
 }
 
 .posts__title {
-    color: #4f4c3f;
+    color: $posts-title;
     margin: 40px 0 20px;
     font-weight: 600;
     display: block;
 }
 
-.posts__title:hover,
-.posts__meta-category-link:hover {
-    color: #32c4d9;
+.posts__title:hover {
+    color: $posts-title-hover;
 }
 
 .posts__headline {
@@ -65,7 +68,7 @@
 
 .posts__body {
     font: 16px/1.2 'Lora', serif;
-    color: rgba(0,0,0,0.87);
+    color: $posts-body;
     line-height: 24px;
 }
 
@@ -74,15 +77,15 @@
 }
 
 .posts__body a {
-    color: rgba(0,0,0,0.87);
-    background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient(#32c4d9,#32c4d9);
+    color: $posts-body-link;
+    background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($posts-body-link-hover,$posts-body-link-hover);
     background-size: .05em 1px,.05em 1px,1px 1px;
     background-repeat: no-repeat,no-repeat,repeat-x;
     text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff, -0.15em 0 #fff;
     background-position: 0 95%,100% 95%,0 95%;
 }
 .posts__body a:hover {
-    color: #32c4d9;
+    color: $posts-body-link-hover;
 }
 
 
@@ -102,15 +105,18 @@
     border-radius: 50%;
     padding: 9px;
     display: inline-block;
-    background: #F0F0F0;
+    background: $posts-share-bg;
+}
+.posts__sharebar a:hover {
+    background: $posts-share-hover-bg;
 }
 .posts__sharebar .icon {
     width: 14px;
     height: 14px;
-    fill: #4f4c3f;
+    fill: $posts-share-icon;
 }
 .posts__sharebar a:hover .icon {
-    fill: #32c4d9;
+    fill: $posts-share-icon-hover;
 }
 
 @media (min-width:768px) {

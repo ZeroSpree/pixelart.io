@@ -1,14 +1,20 @@
-{% capture metaDescription %}
-    {% if page.excerpt %}
+{%- capture metaDescription -%}
+    {%- if page.excerpt -%}
         {{ page.excerpt }}
-    {% else %}
+    {%- else -%}
         {{ site.description }}
-    {% endif %}
-{% endcapture %}
-{% assign metaDescription = {{metaDescription | normalize_whitespace | strip_html | truncate: 160 | escape}} %}
-{% capture metaTitle %}{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% endcapture %}
-{% capture metaImage %}{% if page.splash %}{{ page.splash }}{% else %}{{ site.splash }}{% endif %}{% endcapture %}
-{% capture pageURL %}{{ page.url | replace:'index.html','' | absolute_url }}{% endcapture %}
+    {%- endif -%}
+{%- endcapture -%}
+{%- assign metaDescription = metaDescription | normalize_whitespace | strip_html | truncate: 160 | escape -%}
+{%- capture metaTitle -%}
+    {%- if page.title -%}
+        {{ page.title | escape }}
+    {%- else -%}
+        {{ site.title | escape }}
+    {%- endif -%}
+{%- endcapture -%}
+{%- capture metaImage -%}{% if page.splash %}{{ page.splash }}{% else %}{{ site.splash }}{% endif %}{%- endcapture -%}
+{%- capture pageURL -%}{{ page.url | replace:'index.html','' | absolute_url }}{%- endcapture -%}
 <!-- 
     TODO fix image heights
 -->

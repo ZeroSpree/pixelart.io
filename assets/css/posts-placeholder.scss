@@ -4,13 +4,12 @@
 @import "theme";
 
 .posts__placeholder {
-    background: #F1F2F5;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-name: placeHolderShimmer;
     animation-timing-function: linear;
-    background: #f6f7f8;
-    background: linear-gradient(to right, #eeeeee 0%, #dddddd 50%, #eeeeee 100%);
+    background: $posts-placeholder-bg;
+    background: linear-gradient(to right, $posts-placeholder-bg 0%, $posts-placeholder-bg-anim 50%, $posts-placeholder-bg 100%);
     background-size: 918px 500px;
     display: block;
 }

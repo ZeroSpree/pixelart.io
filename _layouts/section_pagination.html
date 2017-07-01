@@ -1,9 +1,9 @@
-{% assign sectionName = (page.pagination.category | downcase) %}
+{% assign sectionName = page.pagination.category | downcase %}
 
 {% for page in paginator.posts %}
 
     {% for cat in page.categories %}
-        {% assign catName = (cat | downcase) %}
+        {% assign catName = cat | downcase %}
         {% if catName == sectionName %}
 
             {% include posts.html %}
