@@ -1,7 +1,7 @@
 ---
 layout: section_pagination
-permalink: ../pagination/begginer/
+permalink: /pagination/beginner/
 pagination: 
   enabled: true
-  category: begginer
+  category: beginner
 ---
