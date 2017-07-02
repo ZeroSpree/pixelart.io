@@ -31,7 +31,8 @@ sidebar_follow_headline: 'Follow BESTCMS'
 baseurl: "" 
 markdown: kramdown
 plugins: 
-  - jekyll-paginate-v2
+   - jekyll-paginate
+#  - jekyll-paginate-v2
 #  - jekyll-minifier
 exclude:
   - Gemfile
@@ -44,6 +45,9 @@ collections:
 
 sass:
     sass_dir: assets/_sass
+
+paginate: 10
+paginate_path: "/site_pagination/page:num/"
 
 ############################################################
 # Site configuration for the Jekyll 3 Pagination Gem
