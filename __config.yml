@@ -1,22 +1,23 @@
 ############################################################
 # Site Settings
-url: "http://bestcms2017.com"
+url: "http://pixelart.io"
 email: zerospree@yahoo.com
 author: Codrin Pavel
 
 title: BestCMS
 description: > # this means to ignore newlines
-  Content Management Systems (CMS) reviews, opinions and tutorials, ranging from blogging sites to Enterprise CMS platforms.
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml.
 
 facebook_username: pixelartio
-facebook_appid: 1902799049933562
+facebook_appid: 1344412318946948
 facebook_admin: 100000026051093
 
 twitter_username: pixelartIO
 
 splash: image.jpg
 
-ga_id: UA-101969303-1
+ga_id: UA-75349601-1
 
 ############################################################
 # Template Settings

@@ -1,0 +1,115 @@
+/*header*/
+/*drawer*/
+/*sidebar*/
+/*featured posts*/
+/*main posts*/
+/*palceholder posts*/
+.posts {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.095);
+  background: #fff;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 15px;
+  padding: 20px; }
+
+.posts__meta {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.4px; }
+
+.posts__meta-category {
+  display: inline-block; }
+
+.posts__meta-category-link {
+  color: #444;
+  margin-right: 5px;
+  text-transform: capitalize; }
+
+.posts__meta-category-link:hover {
+  color: #5EA281; }
+
+.posts__meta-category-link:not(:last-child)::after {
+  content: ','; }
+
+.posts__date {
+  color: #c2c2c2; }
+
+.posts__title {
+  color: #4f4c3f;
+  margin: 40px 0 20px;
+  font-weight: 600;
+  display: block; }
+
+.posts__title:hover {
+  color: #5EA281; }
+
+.posts__headline {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 600; }
+
+.posts__splash {
+  margin: 0 -20px 20px; }
+
+.posts__splash-img {
+  width: 100%; }
+
+.posts__body {
+  font: 16px/1.2 'Lora', serif;
+  color: #222;
+  line-height: 24px; }
+
+.posts__body p {
+  margin: 0 0 20px; }
+
+.posts__body a {
+  color: #222;
+  background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#5EA281, #5EA281);
+  background-size: .05em 1px,.05em 1px,1px 1px;
+  background-repeat: no-repeat,no-repeat,repeat-x;
+  text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff, -0.15em 0 #fff;
+  background-position: 0 95%,100% 95%,0 95%; }
+
+.posts__body a:hover {
+  color: #5EA281; }
+
+/*Posts Sharebar*/
+.posts__sharebar {
+  text-align: right;
+  font-size: 0;
+  padding: 15px 0 0;
+  margin: 0; }
+
+.posts__sharebar li {
+  padding: 0;
+  margin: 0 0 0 11px;
+  display: inline-block; }
+
+.posts__sharebar a {
+  border-radius: 50%;
+  padding: 9px;
+  display: inline-block;
+  background: #5EA281; }
+
+.posts__sharebar a:hover {
+  background: #47715A; }
+
+.posts__sharebar .icon {
+  width: 14px;
+  height: 14px;
+  fill: #fff; }
+
+.posts__sharebar a:hover .icon {
+  fill: #fff; }
+
+@media (min-width: 768px) {
+  .posts {
+    margin-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px; }
+
+  .posts__splash {
+    margin-left: -40px;
+    margin-right: -40px; } }
