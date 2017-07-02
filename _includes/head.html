@@ -35,14 +35,14 @@ amp canonical
     <meta property="fb:app_id" content="{{site.facebook_appid}}"/>
     <meta property="og:title" content="{{ metaTitle }}">
     <meta property="og:description" content="{{ metaDescription | normalize_whitespace }}">
-    <meta property="og:site_name" content="PixelArt.io">
+    <meta property="og:site_name" content="{{site.title}}">
     <meta property="og:image" content="{{ metaImage }}">
     <meta property="og:image:width" content="480" />
     <meta property="og:image:height" content="360" />
     <meta property="og:image:type" content="image/jpeg" />
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@pixelartIO">
+    <meta name="twitter:site" content="@{{site.twitter_username}}">
     <meta name="twitter:url" content="{{ pageURL }}">
     <meta name="twitter:title" content="{{ metaTitle }}">
     <meta name="twitter:description" content="{{ metaDescription | normalize_whitespace }}">
@@ -60,17 +60,5 @@ amp canonical
 
     <link rel="canonical" href="{{pageURL}}">
 
-    {% if jekyll.environment == 'production' %}
-    <style>{% include assets/css/main.min.css %}</style>
-    {% else %}
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/header.css">
-    <link rel="stylesheet" href="/assets/css/footer.css">
-    <link rel="stylesheet" href="/assets/css/sidebar.css">
-    <link rel="stylesheet" href="/assets/css/posts.css">
-    <link rel="stylesheet" href="/assets/css/posts_amp.css">
-    <link rel="stylesheet" href="/assets/css/posts-featured.css">
-    <link rel="stylesheet" href="/assets/css/posts-placeholder.css">
-    {% endif %}
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Lora:400,700" rel="stylesheet">
+    {% include partials/css.html %}
 </head>

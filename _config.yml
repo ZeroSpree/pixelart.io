@@ -4,7 +4,7 @@ url: "http://pixelart.io"
 email: zerospree@yahoo.com
 author: Codrin Pavel
 
-title: Pixel Art
+title: BestCMS
 description: > # this means to ignore newlines
   Write an awesome description for your new site here. You can edit this
   line in _config.yml.
@@ -18,6 +18,13 @@ twitter_username: pixelartIO
 splash: image.jpg
 
 ga_id: UA-75349601-1
+
+############################################################
+# Template Settings
+logo_html: 'BEST<span>CMS</span>'
+sidebar_featured_headline: 'Featured CMS reviews'
+sidebar_follow_headline: 'Follow BESTCMS'
+
 
 ############################################################
 # Build Settings
