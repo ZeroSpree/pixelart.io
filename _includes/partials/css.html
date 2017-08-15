@@ -1,15 +1,16 @@
 {% if jekyll.environment == 'production' %}
     <style>{% include assets/css/main.min.css %}</style>
 {% else %}
+<!--
     <link rel="stylesheet" href="/assets/css/fonts.css">
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/header.scss">
     <link rel="stylesheet" href="/assets/css/footer.css">
     <link rel="stylesheet" href="/assets/css/sidebar.css">
     <link rel="stylesheet" href="/assets/css/posts.css">
     <link rel="stylesheet" href="/assets/css/posts_amp.css">
     <link rel="stylesheet" href="/assets/css/posts-featured.css">
     <link rel="stylesheet" href="/assets/css/posts-placeholder.css">
+-->
+    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
 {% endif %}
-
-    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Lora:400,400:i,700">-->

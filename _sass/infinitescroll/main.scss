@@ -1,0 +1,59 @@
+body, html {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: $site-bg;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/*GENERAL*/
+main {
+    margin-top: 44px;
+}
+.grid {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1380px;
+    overflow: hidden;
+}
+
+.main-column {
+    width: 100%;
+    box-sizing: border-box;
+}
+.secondary-column {
+    display: none;
+    width: 300px;
+}
+
+@media (min-width:768px) {
+    .grid {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    main {
+        margin-top: 64px;
+    }
+}
+
+@media (min-width:1024px) {
+    main {
+        margin-top: 110px;
+    }
+    .secondary-column {
+        display: inline-block;
+    }
+    .main-column {
+        margin-left: -340px;
+        padding-left: 340px;
+        float: right;
+    }
+}

@@ -4,31 +4,23 @@
          data-splash="{% if page.splash %}{{ page.splash }}{% else %}{{ site.splash }}{% endif %}"
          data-url-processed="{{urlProcessed}}">
 
-    <div class="posts__header">
-        <div class="posts__meta">
-            <div class="posts__meta-category">
-                {% for category in page.categories %}
-                {% if category != 'featured' %}
-                <a class="posts__meta-category-link" href="/{{ category }}/">{{ category | escape }}</a>
-                {% endif %}
-                {% endfor %}
-            </div>
-            <span class="posts__date">{{ page.date | date_to_string }}</span>
-        </div>
-
-        <a class="posts__title" href="{{ page.url | relative_url }}">
-            <h2 class="posts__headline js--title">{{ page.title | escape }}</h2>
-        </a>
-
-        {% if page.splash %}
-        <div class="posts__splash">
-            <img class="posts__splash-img" src="/assets/posts_img/{{ page.splash }}" alt="{{ page.title | escape }}" />
-        </div>
-        {% endif %}
-    </div>
+    {% include partials/posts/header.html %}
 
     <div class="posts__body">
-        {{ page.content }}
+        {{ page.content | split:site.excerpt_separator | first }}
+
+        {% if page.content contains site.excerpt_separator %}
+        <div class="posts__readmore">
+            <div class="posts__readmore-container">
+                {{ page.content | split:site.excerpt_separator | last }}
+            </div>
+            <button class="posts__readmore-btn js--readmore">
+                <svg>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-down"></use>
+                </svg>
+            </button>
+        </div>
+        {% endif %}
     </div>
 
     <div class="posts__footer">

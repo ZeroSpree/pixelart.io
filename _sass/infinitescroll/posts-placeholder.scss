@@ -1,0 +1,36 @@
+.posts__placeholder {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: $posts-placeholder-bg;
+    background: linear-gradient(to right, $posts-placeholder-bg 0%, $posts-placeholder-bg-anim 50%, $posts-placeholder-bg 100%);
+    background-size: 918px 500px;
+    display: block;
+}
+
+@keyframes placeHolderShimmer{
+    0% {
+        background-position: -918px 0;
+    }
+    100%{
+        background-position: 918px 0;
+    }
+}
+
+.posts__placeholder--meta {
+    margin-top: 8px;
+    height: 10px;
+    width: 25%;
+}
+
+.posts__placeholder--headline {
+    height: 25px;
+    width: 50%;
+    margin: 60px 0 34px;
+}
+
+.posts__placeholder--splash {
+    width: 100%;
+    padding-top: 56.25%;
+}
