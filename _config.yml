@@ -1,35 +1,40 @@
 ############################################################
 # Site Settings
-url: "http://bestcms2017.com"
-email: zerospree@yahoo.com
+url: "http://pixelart.io"
+absurl: "http://pixelart.io"
 author: Codrin Pavel
 
 title: BestCMS
 description: > # this means to ignore newlines
-  Content Management Systems (CMS) reviews, opinions and tutorials, ranging from blogging sites to Enterprise CMS platforms.
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml.
 
-facebook_username: pixelartio
+facebook_like: http://pixelart.io # OPTIONAL. false | url to like
 facebook_appid: 1902799049933562
 facebook_admin: 100000026051093
+facebook_share_description: "Take your daily pixel art inspiration at pixelart.io"
+facebook_share_caption: "PIXELART.COM"
 
 twitter_username: pixelartIO
+share_hashtags: "pixelart, pixel, art, pixelart.io" # OPTIONAL . false | "tags, for, twitter, &, tumblr"
 
 splash: image.jpg
 
-ga_id: UA-101969303-1
+ga_id: UA-75349601-1
 
 ############################################################
 # Template Settings
-logo_html: 'BEST<span>CMS</span>'
-sidebar_featured_headline: 'Featured CMS reviews'
-sidebar_follow_headline: 'Follow BESTCMS'
+logo_html: 'PIXEL<span>art</span>'
+sidebar_featured_headline: 'Featured pixels'
+sidebar_follow_headline: 'Follow PIXELART.IO'
 
 
 ############################################################
 # Build Settings
-
+imgfolder: /assets/img/
 baseurl: "" 
 markdown: kramdown
+excerpt_separator: "{readmore}"
 plugins: 
   - jekyll-paginate-v2
 #  - jekyll-minifier
@@ -43,7 +48,14 @@ collections:
     permalink: /:collection/:title
 
 sass:
-    sass_dir: assets/_sass
+  sourcemap: true
+  style: expanded
+  line_comments: true
+  trace_selectors: false
+  debug_info: false
+#theme: infinitescroll
+
+future: true
 
 ############################################################
 # Site configuration for the Jekyll 3 Pagination Gem
