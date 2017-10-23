@@ -7,14 +7,13 @@
     z-index: 1000;
     height: 44px;
     text-align: center;
-    box-shadow: 0 1px 0 0 rgba(0,0,0,.095);
 }
 
 .header__logo {
     display: inline-block;
     color: $header-logo;
     font-weight: 800;
-    font-size: 32px;
+    font-size: 16px;
     letter-spacing: -1px;
 }
 .header__logo span {

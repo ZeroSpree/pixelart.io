@@ -59,7 +59,9 @@ amp canonical
     <meta itemprop="name" content="{{ metaTitle }}">
     <meta itemprop="description" content="{{ metaDescription | normalize_whitespace }}">
     <meta itemprop="image" content="{{ metaImage }}">
-    <link rel="amphtml" href="{{site.url}}/amp{{ page.url | replace:'index.html','' | relative_url }}">
+        {% if page.amp %}
+        <link rel="amphtml" href="{{site.url}}/amp{{ page.url | replace:'index.html','' | relative_url }}">
+        {% endif %}
     {% endif %}
 
     <link rel="canonical" href="{{pageURL}}">

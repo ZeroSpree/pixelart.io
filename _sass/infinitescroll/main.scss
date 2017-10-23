@@ -21,16 +21,18 @@ main {
     width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
-    max-width: 1380px;
     overflow: hidden;
 }
 
 .main-column {
     width: 100%;
+    max-width: 728px;
     box-sizing: border-box;
+    float: left;
 }
 .secondary-column {
     display: none;
+    position: absolute;
     width: 300px;
 }
 
@@ -45,6 +47,10 @@ main {
 }
 
 @media (min-width:1024px) {
+    .grid {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
     main {
         margin-top: 110px;
     }
@@ -52,8 +58,6 @@ main {
         display: inline-block;
     }
     .main-column {
-        margin-left: -340px;
-        padding-left: 340px;
-        float: right;
+        margin-left: 340px;
     }
 }

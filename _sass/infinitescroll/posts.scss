@@ -1,17 +1,14 @@
 .posts {
     width: 100%;
-    border: 1px solid rgba(0,0,0,.095);
     background: #fff;
     box-sizing: border-box;
     display: inline-block;
     vertical-align: top;
     margin-bottom: 15px;
-    padding: 0 20px 20px;
+    padding: 0 0 20px;
 }
 
-.posts__category {
-    margin-top: 20px;
-}
+.posts__category {}
 .posts__category-link {
     color: $posts-category;
     margin-right: 5px;
@@ -46,8 +43,6 @@
 .posts__title {
     color: $posts-title;
     margin: 20px 0;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #EFF0EA;
     display: block;
 }
 
@@ -57,19 +52,19 @@
 
 .posts__headline {
     margin: 0;
-    font-size: 22px;
-    font-weight: 700;
+    font: 300 22px/1.2 'Lora', serif;
+    text-transform: uppercase;
 }
 
 .posts__splash {
-    margin: 0 -20px;
     font-size: 0;
     position: relative;
+    margin-bottom: 20px;
 }
 .posts__splash-credit {
     position: absolute;
     bottom: 0;
-    right: 0;
+    left: 0;
     font-size: 10px;
     background: #444;
     color: #fff;
@@ -81,7 +76,7 @@ a.posts__splash-credit:hover {
     color: #444; 
 }
 .posts__splash-img {
-    width: 100%;
+    max-width: 100%;
 }
 .posts__splash-video {
     position: relative;
@@ -111,6 +106,11 @@ a.posts__splash-credit:hover {
 
 .posts__body p {
     margin: 0 0 20px;
+}
+
+.posts__body img,
+.posts__body iframe {
+    max-width: 100%;
 }
 
 .posts__body a {
@@ -197,15 +197,8 @@ a.posts__splash-credit:hover {
 @media (min-width:768px) {
     .posts {
         margin-bottom: 30px;
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-    .posts__splash {
-        margin-left: -40px;
-        margin-right: -40px;
     }
     .posts__headline {
         font-size: 34px;
-        font-weight: 600;
     }
 }

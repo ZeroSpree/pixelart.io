@@ -2,6 +2,7 @@
 layout: default
 ---
 
+{% assign sectionName = 'home' %}
 {% assign urlProcessed = true %}
 {% include posts.html %}
 
@@ -11,11 +12,16 @@ layout: default
 
 {% for page in site.posts %}
     {% if forloop.index < postsPerPage %}
-        {% if currentPostUrl != page.url %}
-            {% include posts.html %}
-        {% endif %}
-        {% if currentPostUrl == page.url %}
-            {% assign postsPerPage = postsPerPage | plus: 1 %}
-        {% endif %}
+        {% for cat in page.categories %}
+            {% assign catName = cat | downcase %}
+            {% if catName == sectionName %}
+                {% if currentPostUrl != page.url %}
+                    {% include posts.html %}
+                {% endif %}
+                {% if currentPostUrl == page.url %}
+                    {% assign postsPerPage = postsPerPage | plus: 1 %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
     {% endif %}
 {% endfor %}
