@@ -15,7 +15,7 @@ facebook_share_description: "Take your daily pixel art inspiration at pixelart.i
 facebook_share_caption: "PIXELART.COM"
 
 twitter_username: pixelartIO
-share_hashtags: "pixelart, pixel, art, pixelart.io" # OPTIONAL . false | "tags, for, twitter, &, tumblr"
+share_hashtags: "pixelart" # OPTIONAL . false | "tags, for, twitter, &, tumblr"
 
 splash: image.jpg
 

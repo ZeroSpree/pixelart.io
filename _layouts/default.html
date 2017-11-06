@@ -15,7 +15,12 @@ lang="{{ page.lang | default: site.lang | default: "en" }}"
                 <div class="main-column">
                     <section id="stream" 
                              data-pagination-current-page="1" 
-                             data-pagination-path="{% if page.permalink %}{{page.permalink}}{% else %}/home/{% endif %}">
+                             data-pagination-path="{% if page.permalink %}{{page.permalink}}{% else %}/home/{% endif %}"
+                             data-share-tags="{{site.share_hashtags}}"
+                             data-share-fb-caption="{{site.facebook_share_caption}}"
+                             data-share-fb-description="{{site.facebook_share_description}}"
+                             data-share-tw-username="{{site.twitter_username}}"
+                             data-share-sitename="{{site.absurl}}">
                         {{ content }}
                     </section>
                     {% include partials/spinner.html %}

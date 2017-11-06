@@ -10,24 +10,25 @@ $(function(){
             title        = $ct.find('.js--title').text(),
             media_url    = $ct.attr('data-url'),
             thumb        = $ct.attr('data-splash'),
-            absurl       = encodeURIComponent(" http://bestcms2017.com "),
+            $dataCt      = $('#stream'),
+            absurl       = encodeURIComponent($dataCt.attr('data-share-sitename')),
             share_url    = '',
-            twitter_via  = '',
-            twitter_tags = '',
-            tumblr_tags  = '';
+            twitter_via  = $dataCt.attr('data-share-tw-username'),
+            tags         = $dataCt.attr('data-share-tags'),
+            fbCaption    = $dataCt.attr('data-share-fb-caption'),
+            fbDesc       = $dataCt.attr('data-share-fb-description');
 
+        twitter_via = '&via='+twitter_via;
         
-        twitter_via = '&via=bestCMS2017';
         
-        
-        twitter_tags = '&hashtags=bestcms, bestblogs, bestcms2017';
-        tumblr_tags = '&tags=bestcms, bestblogs, bestcms2017';
+        twitter_tags = '&hashtags='+tags;
+        tumblr_tags = '&tags='+tags;
         
 
         media_url_encoded = encodeURIComponent(media_url);
 
         if(service == 'facebook'){
-            share_url = 'https://www.facebook.com/dialog/feed?app_id=1902799049933562&display=popup&description=Find more about the best CMS and blogging platforms at bestcms2017.com&caption=BESTCMS2017.COM&link='+media_url_encoded+'&redirect_uri='+media_url_encoded+'&picture='+thumb;
+            share_url = 'https://www.facebook.com/dialog/feed?app_id=1902799049933562&display=popup&description='+fbDesc+'&caption='+media_url_encoded+'&link='+media_url_encoded+'&redirect_uri='+media_url_encoded+'&picture='+thumb;
         }
         else if(service == 'twitter'){
             share_url = 'https://twitter.com/share?url='+media_url_encoded+'&text='+title+twitter_via+twitter_tags;
@@ -39,10 +40,10 @@ $(function(){
             share_url = 'http://tumblr.com/share/link?url='+media_url_encoded+'&content='+thumb+'&posttype=photo'+tumblr_tags+'&show-via='+media_url;
         }
         else if(service == 'pinterest'){
-            share_url = 'http://pinterest.com/pin/create/button/?url='+media_url_encoded+'&description='+title+' found at http://bestcms2017.com&media='+thumb;
+            share_url = 'http://pinterest.com/pin/create/button/?url='+media_url_encoded+'&description='+title+' found at '+absurl+'&media='+thumb;
         }
         else if(service == 'reddit'){
-            share_url = 'http://www.reddit.com/submit?url='+media_url_encoded+'&title='+title+' found at http://bestcms2017.com';
+            share_url = 'http://www.reddit.com/submit?url='+media_url_encoded+'&title='+title+' found at '+absurl;
         }
 
         if(share_url.length){
