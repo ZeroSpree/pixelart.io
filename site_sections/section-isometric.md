@@ -1,7 +1,8 @@
 ---
 layout: section
-title: Isometric Pixel Art Examples, Ideas, Inspiration
 anchortext: Isometric
-permalink: /isometric/
+section_name: isometric
+title: Isometric Pixel Art ideas, inspiration and examples
 headernav: true
+permalink: /isometric/
 ---

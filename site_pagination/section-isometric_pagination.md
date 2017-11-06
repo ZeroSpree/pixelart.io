@@ -1,7 +1,7 @@
 ---
 layout: section_pagination
 permalink: /pagination/isometric/
-pagination: 
+pagination:
   enabled: true
   category: isometric
 ---

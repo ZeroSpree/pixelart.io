@@ -1,5 +1,5 @@
 {% for my_page in site.pages %}
-    {% if my_page.anchortext and my_page.headernav %}
+    {% if my_page.headernav == "true" %}
     <li>
         <a href="{{ my_page.permalink }}" {% if page.anchortext == my_page.anchortext %}class="is-active"{% endif %}>{{ my_page.anchortext | escape }}</a>
     </li>

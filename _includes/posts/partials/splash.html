@@ -1,0 +1,34 @@
+{% if page.videosplash %}
+    <div class="posts__splash">
+        {% if page.videosplash contains "facebook" %}
+        <div 
+            class="fb-video" 
+            data-href="{{ page.videosplash }}" 
+            data-width="1000" 
+            data-show-text="false">
+        </div>
+        {% else %}
+            <div class="posts__splash-video">
+                <iframe src="{{ page.videosplash }}" 
+                    width="1000" 
+                    style="border:none;overflow:hidden" 
+                    scrolling="no" 
+                    frameborder="0" 
+                    allowTransparency="true" 
+                    allowFullScreen="true">
+                </iframe>
+            </div>
+        {% endif %}
+    </div>
+{% elsif page.splash %}
+    <div class="posts__splash">
+        <img class="posts__splash-img" data-src="{{ page.splash }}" alt="{{ page.title | escape }}" />
+        {% if page.splash_credits_title %}
+            {% if page.splash_credits_url %}
+                <a href="{{page.splash_credits_url}}" class="posts__splash-credit" target="_blank">{{ page.splash_credits_title }}</a>
+            {% else %}
+                <span class="posts__splash-credit">{{ page.splash_credits_title }}</span>
+            {% endif %}
+        {% endif %}
+    </div>
+{% endif %}

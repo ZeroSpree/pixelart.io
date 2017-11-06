@@ -3,32 +3,32 @@
 lang="{{ page.lang | default: site.lang | default: "en" }}"
 {% if page.layout == 'post' %}itemscope itemtype="http://schema.org/Article"{% endif %}
 >
-    {% include head.html %}
+    {% include partials/head.html %}
 
     <body>
         <div id="fb-root"></div>
-        {% include header.html %}
+        {% include partials/header.html %}
 
         <main role="main">
             <div class="grid">
-                {% include sidebar.html %}
+                {% include sidebars/sidebar-left.html %}
                 <div class="main-column">
                     <section id="stream" 
                              data-pagination-current-page="1" 
                              data-pagination-path="{% if page.permalink %}{{page.permalink}}{% else %}/home/{% endif %}">
                         {{ content }}
                     </section>
-
-                    <div class="posts posts-placeholder">
-                        <div class="posts__placeholder posts__placeholder--meta"></div>
-                        <div class="posts__placeholder posts__placeholder--headline"></div>
-                        <div class="posts__placeholder posts__placeholder--splash"></div>
-                    </div>
-
+                    {% include partials/spinner.html %}
                 </div>
+                {% include sidebars/sidebar-right.html %}
             </div>
         </main>
 
-        {% include footer.html %}
+        {% include partials/svg.html %}
+        {% include partials/scripts.html %}
+
+        {% if jekyll.environment != 'production' %}
+            {% include partials/debug.html %}
+        {% endif %}
     </body>
 </html>

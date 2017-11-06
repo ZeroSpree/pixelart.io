@@ -1,7 +1,7 @@
 ---
 layout: section_pagination
 permalink: /pagination/character/
-pagination: 
+pagination:
   enabled: true
   category: character
 ---

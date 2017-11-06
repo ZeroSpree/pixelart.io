@@ -1,0 +1,45 @@
+<script>
+    var data = {};
+    var site = [];
+    var sections = [];
+    var posts = [];
+
+    {% for sectionPage in site.pages %}
+        sections.push( {{sectionPage | jsonify}} );
+    {% endfor %}
+
+    {% for key in site %}
+        {% if key != 'pages' and
+              key != 'static_files' and
+              key != 'documents' and
+              key != 'collections' and
+              key != 'categories' and
+              key != 'posts' and
+              key != 'html_pages' and
+              key != 'related_posts'
+        %}
+            site['{{key}}'] = '{{site[key] | jsonify}}';
+        {% endif %}
+    {% endfor %}
+
+    {% for page in site.posts %}
+        var post = {};
+        {% for key in page %}
+            {% if key != 'output' and
+                  key != 'content' and
+                  key != 'excerpt' and
+                  key != 'next' and 
+                  key != 'previous'
+            %}
+                post['{{key}}'] = '{{page[key] | jsonify}}';
+            {%endif%} 
+        {% endfor %}
+        posts.push(post);
+    {% endfor %}
+
+    data['site']       = site;
+    data['site.pages'] = sections;
+    data['site.posts'] = posts;
+
+    console.log('site', data);
+</script>

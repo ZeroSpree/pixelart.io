@@ -3,12 +3,13 @@
 {% for page in paginator.posts %}
 
     {% for cat in page.categories %}
+
         {% assign catName = cat | downcase %}
+
         {% if catName == sectionName %}
-
-            {% include posts.html %}
-
+            {% include posts/posts.html %}
         {% endif %}
+
     {% endfor %}
 
 {% endfor %}

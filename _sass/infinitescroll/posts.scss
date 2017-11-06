@@ -5,17 +5,48 @@
     display: inline-block;
     vertical-align: top;
     margin-bottom: 15px;
-    padding: 0 0 20px;
+    padding: 20px;
+    border: 1px solid $line-color;
+    border-width: 1px 0;
 }
 
-.posts__category {}
+.posts__header {
+  overflow: hidden;
+}
+
+.posts__author {
+  color: $posts-author-name;
+  display: block;
+  font-size: 13px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.posts__author-name {
+  font-weight: 700;
+  line-height: 20px;
+}
+.posts__author-avatar {
+  float: left;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.posts__author-cta {
+  display: block;
+  color: $posts-author-cta;
+}
+
+.posts__category {
+    margin-bottom: 20px;
+}
 .posts__category-link {
     color: $posts-category;
     margin-right: 5px;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1px;
 }
 
 .posts__category-link:hover {
@@ -36,14 +67,19 @@
 .posts__date {
     color: $posts-date;
     font-size: 13px;
-    font-weight: 600;
     letter-spacing: -0.4px;
+    float: right;
+    margin-bottom: 20px;
+    padding-left: 10px;
 }
 
 .posts__title {
     color: $posts-title;
-    margin: 20px 0;
+    margin: 0 0 30px;
+    padding-bottom: 20px;
     display: block;
+    border-bottom: 1px solid $line-color;
+    clear: both;
 }
 
 .posts__title:hover {
@@ -52,31 +88,26 @@
 
 .posts__headline {
     margin: 0;
-    font: 300 22px/1.2 'Lora', serif;
-    text-transform: uppercase;
+    font-size: 18px;
 }
 
 .posts__splash {
     font-size: 0;
     position: relative;
-    margin-bottom: 20px;
+    margin: 10px 0 30px;
 }
 .posts__splash-credit {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     font-size: 10px;
-    background: #444;
-    color: #fff;
-    padding: 0 10px;
     line-height: 20px;
+    display: block;
+    color: $posts-body-link;
 }
 a.posts__splash-credit:hover {
-    background: #fff;
-    color: #444; 
+    color: $posts-body-link-hover; 
 }
 .posts__splash-img {
     max-width: 100%;
+    display: block;
 }
 .posts__splash-video {
     position: relative;
@@ -115,7 +146,7 @@ a.posts__splash-credit:hover {
 
 .posts__body a {
     color: $posts-body-link;
-    background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($posts-body-link-hover,$posts-body-link-hover);
+    background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($posts-body-link,$posts-body-link);
     background-size: .05em 1px,.05em 1px,1px 1px;
     background-repeat: no-repeat,no-repeat,repeat-x;
     text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff, -0.15em 0 #fff;
@@ -125,42 +156,48 @@ a.posts__splash-credit:hover {
     color: $posts-body-link-hover;
 }
 
+.posts__body blockquote {
+    font-style: italic;
+    font-size: 18px;
+    padding: 0 0 0 20px;
+    margin: 30px 0;
+    color: $posts-blockquote-color;
+    border-left: 5px solid $posts-blockquote-border;
+}
+
+.posts__footer {
+  border-top: 1px solid #F3F3F3;
+  margin-top: 30px;
+  padding-top: 30px;
+}
 /*Posts Read More*/
 .posts__readmore {}
 .posts__readmore-btn {
-    background: $posts-readmore-bg;
+    background: none;
     color: $posts-readmore-color;
     cursor: pointer;
     outline: 0;
     border: 0;
-    padding: 0 20px;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     border-radius: 3px;
     font: 600 13px/40px 'Open Sans';
 }
 .posts__readmore-btn:after {
-    content: 'Read More';
-}
-.posts__readmore.is--active .posts__readmore-btn:after {
-    content: 'Read Less';
+    content: $posts-readmore-text;
 }
 .posts__readmore-btn svg {
     width: 13px;
     height: 7px;
     margin-right: 5px;
     fill: none;
-    stroke: $primary-color;
+    stroke: $posts-readmore-color;
 }
-.posts__readmore.is--active .posts__readmore-btn svg {
-    -ms-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-.posts__readmore-container {
+.posts__readmore,
+.is--expanded .posts__readmore-btn {
     display: none;
 }
-.posts__readmore.is--active .posts__readmore-container {
+.is--expanded .posts__readmore {
     display: block;
 }
 
@@ -168,37 +205,75 @@ a.posts__splash-credit:hover {
 .posts__sharebar {
     text-align: right;
     font-size: 0;
-    padding: 20px 0 0;
+    padding: 0;
     margin: 0;
+    float: right;
+    width: 100%;
 }
 .posts__sharebar li {
     padding: 0;
-    margin: 0 0 0 11px;
+    margin: 0;
     display: inline-block;
+    width: 16.6666%;
 }
 .posts__sharebar a {
-    border-radius: 50%;
-    padding: 9px;
-    display: inline-block;
+    padding: 12px 0;
+    display: block;
     background: $posts-share-bg;
+    color: $posts-share-color;
+    text-align: center;
 }
+
 .posts__sharebar a:hover {
-    background: $posts-share-hover-bg;
+    color: #fff;
+}
+.posts__sharebar .icon-facebook:hover {
+  background: #3B5998;
+}
+.posts__sharebar .icon-twitter:hover {
+  background: #1DA1F2;
+}
+.posts__sharebar .icon-google-plus:hover {
+  background: #DB4437;
+}
+.posts__sharebar .icon-tumblr:hover {
+  background: #35465c;
+}
+.posts__sharebar .icon-pinterest:hover {
+  background: #BD081C;
+}
+.posts__sharebar .icon-reddit:hover {
+  background: #ff4500;
 }
 .posts__sharebar .icon {
-    width: 14px;
-    height: 14px;
-    fill: $posts-share-icon;
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
 }
-.posts__sharebar a:hover .icon {
-    fill: $posts-share-icon-hover;
+
+@media (min-width:500px) {
+  .posts__readmore-btn {
+    background: $posts-readmore-bg;
+    padding: 0 20px;
+    display: inline-block;
+    margin: 0;
+  }
+  .posts__sharebar {
+    width: auto;
+  }
+  .posts__sharebar li {
+    width: 40px;
+  }
 }
 
 @media (min-width:768px) {
     .posts {
         margin-bottom: 30px;
     }
-    .posts__headline {
-        font-size: 34px;
+}
+@media (min-width:1024px) {
+    .posts {
+        border-width: 1px;
+        padding: 20px 29px;
     }
 }

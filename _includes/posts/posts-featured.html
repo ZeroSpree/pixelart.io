@@ -1,0 +1,6 @@
+<article class="posts-featured {% for category in post.categories %}posts-featured--{{ category | escape }} {% endfor %}">
+    <a class="posts-featured__title" href="{{ post.url | relative_url }}">
+        <span class="posts-featured__date">{{ post.date | date_to_string }}</span>
+        <h4 class="posts-featured__headline">{{ post.title | escape }}</h4>
+    </a>
+</article>

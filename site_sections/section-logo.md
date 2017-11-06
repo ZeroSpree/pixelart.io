@@ -1,7 +1,8 @@
 ---
 layout: section
-title: Pixel Art Logo Design, Ideas and Examples
 anchortext: Logo
-permalink: /logo/
+section_name: logo
+title: Pixel Art Logo design and inspiration
 headernav: true
+permalink: /logo/
 ---

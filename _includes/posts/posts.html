@@ -1,0 +1,22 @@
+<article class="posts {% for category in page.categories %}posts--{{ category | escape }} {% endfor %}"
+         data-url="{{ page.url | absolute_url }}"
+         data-relurl="{{ page.url | relative_url }}"
+         data-splash="{% if page.splash %}{{ page.splash }}{% else %}{{ site.splash }}{% endif %}"
+         data-url-processed="{{urlProcessed}}">
+
+    <div class="posts__header">
+        {% include posts/partials/date.html %}
+        {% include posts/partials/author.html %}
+        {% include posts/partials/categories.html %}
+        {% include posts/partials/headline.html %}
+        {% include posts/partials/splash.html %}
+    </div>
+
+    {% include posts/partials/body.html %}
+
+    <div class="posts__footer">
+        {% include posts/partials/readmore.html %}
+        {% include posts/partials/sharebar.html %}
+    </div>
+
+</article>

@@ -3,7 +3,7 @@ $(function(){
     var $win                  = $(window),
         $streamContainer      = $('#stream'),
         paginationPath        = $streamContainer.attr('data-pagination-path'),
-        iTreshold             = $('.posts-placeholder').height(),
+        iTreshold             = 200,
         processRequest        = true,
         requestPage,
         paginationRequest,
@@ -53,7 +53,7 @@ $(function(){
                 },
                 error : function () {
 
-                    $('.posts-placeholder').remove();
+                    $('.spinner').remove();
 
                     if( window.ga ) {
                         ga('send', {

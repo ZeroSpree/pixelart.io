@@ -4,7 +4,7 @@ layout: default
 
 {% assign sectionName = 'home' %}
 {% assign urlProcessed = true %}
-{% include posts.html %}
+{% include posts/posts.html %}
 
 {% assign urlProcessed = false %}
 {% assign currentPostUrl = page.url %}
@@ -16,7 +16,7 @@ layout: default
             {% assign catName = cat | downcase %}
             {% if catName == sectionName %}
                 {% if currentPostUrl != page.url %}
-                    {% include posts.html %}
+                    {% include posts/posts.html %}
                 {% endif %}
                 {% if currentPostUrl == page.url %}
                     {% assign postsPerPage = postsPerPage | plus: 1 %}

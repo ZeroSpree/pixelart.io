@@ -11,7 +11,7 @@ layout: default
             {% assign catName = cat | downcase %}
             {% if catName == sectionName %}
                 {% assign posts_limit = posts_limit | plus: 1 %}
-                {% include posts.html %}
+                {% include posts/posts.html %}
             {% endif %}
         {% endfor %}
     {% endif %}

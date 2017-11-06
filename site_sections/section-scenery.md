@@ -1,7 +1,8 @@
 ---
 layout: section
-title: Pixel Art Scenery and Landscapes
 anchortext: Scenery
-permalink: /scenery/
+section_name: scenery
+title: Pixel Art Scenery and Landscapes
 headernav: true
+permalink: /scenery/
 ---

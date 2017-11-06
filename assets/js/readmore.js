@@ -1,5 +1,5 @@
 $(function(){
     $('.js--readmore').on('click', function () {
-        $(this).parent().toggleClass('is--active');
+        $(this).parents('.posts').first().toggleClass('is--expanded');
     });
 });

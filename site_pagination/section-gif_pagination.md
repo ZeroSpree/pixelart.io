@@ -1,7 +1,7 @@
 ---
 layout: section_pagination
 permalink: /pagination/gif/
-pagination: 
+pagination:
   enabled: true
   category: gif
 ---

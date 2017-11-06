@@ -1,7 +1,8 @@
 ---
 layout: section
-title: Pixel Art Gifs and Animation
 anchortext: GIF
-permalink: /gif/
+section_name: gif
+title: Pixel Art GIFs and Animations
 headernav: true
+permalink: /gif/
 ---

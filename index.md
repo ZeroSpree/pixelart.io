@@ -1,3 +1,4 @@
 ---
-layout: home 
+layout: section
+section_name: home
 ---

@@ -1,7 +1,8 @@
 ---
 layout: section
-title: Pixel Art Templates
 anchortext: Templates
-permalink: /templates/
+section_name: templates
+title: Pixel Art Templates
 headernav: true
+permalink: /templates/
 ---

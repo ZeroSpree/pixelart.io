@@ -1,22 +1,35 @@
 .sidebar {
-    padding-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    width: 300px;
+    display: none;
+    vertical-align: top;
 }
 
-.sidebar--fixed {
+.sidebar--left {}
+.sidebar--right {}
+
+.sidebar__container {
+    width: 300px;
+    overflow: hidden;
+}
+
+.sidebar__container--fixed {
     position: fixed;
 }
 
-.secondary-headline {
-    text-transform: uppercase;
-    color: $sidebar-title;
-    margin: 0 0 20px;
-    font-size: 12px;
-    letter-spacing: 1px;
-    font-weight: 600;
+.sidebar__section {
+    padding: 20px 30px;
+    border: 1px solid $line-color;
+    margin-bottom: 30px;
+    background: $sidebar-background;
 }
 
-.secondary-headline:not(:first-child) {
-    margin-top: 40px;
+.secondary-headline {
+    padding-bottom: 15px;
+    border-bottom: 1px solid $line-color;
+    margin: 0 0 20px;
+    color: $sidebar-title;
 }
 
 .sidebar__twitter-follow,

@@ -1,7 +1,7 @@
 ---
 layout: section_pagination
 permalink: /pagination/logo/
-pagination: 
+pagination:
   enabled: true
   category: logo
 ---

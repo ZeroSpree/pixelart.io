@@ -1,0 +1,10 @@
+<div class="sidebar sidebar--left">
+    <div class="sidebar__container">
+        {% if page.iscreator %}
+            {% include sidebars/partials/author-card.html %}
+        {% else %}
+            {% include sidebars/partials/featured-authors.html %}
+            {% include sidebars/partials/follow.html %}
+        {% endif %}
+    </div>
+</div>

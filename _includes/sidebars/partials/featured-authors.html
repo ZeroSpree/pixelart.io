@@ -1,0 +1,13 @@
+{% if site.sidebar_featured_creators_headline %}
+    <div class="sidebar__section">
+        <h3 class="secondary-headline allcaps">{{site.sidebar_featured_creators_headline}}</h3>
+        {% for cat in site.pages %}
+            {% if cat.creator_featured == "true" %}
+                <a class="featured-author" href="{{ cat.permalink }}">
+                    <span class="featured-author__avatar" style="background-image:url('{{cat.creator_avatar}}')"></span>
+                    <span class="featured-author__name">{{ cat.creator_name | escape }}</span>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}

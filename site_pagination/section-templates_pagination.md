@@ -1,7 +1,7 @@
 ---
 layout: section_pagination
 permalink: /pagination/templates/
-pagination: 
+pagination:
   enabled: true
   category: templates
 ---

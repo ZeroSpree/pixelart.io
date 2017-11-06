@@ -1,7 +1,8 @@
 ---
 layout: section
-title: Pixel Art Character Ideas, Design, Examples
 anchortext: Character
-permalink: /character/
+section_name: character
+title: Pixel Art Character ideas, design and inspiration
 headernav: true
+permalink: /character/
 ---

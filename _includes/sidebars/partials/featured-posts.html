@@ -1,0 +1,12 @@
+{% if site.sidebar_featured_headline %}
+    <div class="sidebar__section">
+    <h3 class="secondary-headline allcaps">{{site.sidebar_featured_headline}}</h3>
+    {% for post in site.posts %}
+        {% for cat in post.categories %}
+            {% if cat == 'featured' %}
+                {% include posts/posts-featured.html %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</div>
+{% endif %}

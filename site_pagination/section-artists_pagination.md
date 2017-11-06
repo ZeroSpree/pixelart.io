@@ -1,7 +1,7 @@
 ---
 layout: section_pagination
 permalink: /pagination/artists/
-pagination: 
+pagination:
   enabled: true
   category: artists
 ---

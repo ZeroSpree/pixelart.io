@@ -1,11 +1,8 @@
 ---
 layout: section
-title: Pixel Art Artists
 anchortext: Artists
-permalink: /artists/
+section_name: artists
+title: Pixel Art Artists and Creators
 headernav: true
-#pagination-path: artists
-#pagination: 
-#  enabled: true
-#  category: artists
+permalink: /artists/
 ---

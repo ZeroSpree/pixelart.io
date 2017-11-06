@@ -1,0 +1,38 @@
+<article class="posts {% for category in page.categories %}posts--{{ category | escape }} {% endfor %}">
+
+    <div class="posts__header">
+        {% include posts/partials/author.html %}
+        {% include posts/partials/date.html %}
+        {% include posts/partials/headline.html %}
+        {% include posts/partials/categories.html %}
+        {% include posts/partials/splash.html %}
+    </div>
+
+    <div class="posts__body">
+        {{ page.content }}
+    </div>
+
+    <div class="posts__footer">
+        <ul class="posts__sharebar">
+            <li>
+                <amp-social-share type="facebook" data-param-app_id="254325784911610"></amp-social-share>
+            </li>
+            <li>
+                <amp-social-share type="twitter"></amp-social-share>
+            </li>
+            <li>
+                <amp-social-share type="gplus"></amp-social-share>
+            </li>
+            <li>
+                <amp-social-share type="tumblr"></amp-social-share>
+            </li>
+            <li>
+                <amp-social-share type="pinterest"></amp-social-share>
+            </li>
+            <li>
+                <amp-social-share type="email"></amp-social-share>
+            </li>
+        </ul>
+    </div>
+
+</article>

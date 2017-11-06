@@ -1,0 +1,9 @@
+<div class="posts__body">
+    {{ page.content | split:site.excerpt_separator | first }}
+
+    {% if page.content contains site.excerpt_separator %}
+    <div class="posts__readmore">
+        {{ page.content | split:site.excerpt_separator | last }}
+    </div>
+    {% endif %}
+</div>
