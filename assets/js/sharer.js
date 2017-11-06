@@ -16,19 +16,17 @@ $(function(){
             twitter_via  = $dataCt.attr('data-share-tw-username'),
             tags         = $dataCt.attr('data-share-tags'),
             fbCaption    = $dataCt.attr('data-share-fb-caption'),
-            fbDesc       = $dataCt.attr('data-share-fb-description');
+            fbDesc       = $dataCt.attr('data-share-fb-description'),
+            imgFolder    = $dataCt.attr('data-share-imgfolder'),
+            fbAppId      = $dataCt.attr('data-share-fb-appid');
 
         twitter_via = '&via='+twitter_via;
-        
-        
         twitter_tags = '&hashtags='+tags;
         tumblr_tags = '&tags='+tags;
-        
-
         media_url_encoded = encodeURIComponent(media_url);
 
         if(service == 'facebook'){
-            share_url = 'https://www.facebook.com/dialog/feed?app_id=1902799049933562&display=popup&description='+fbDesc+'&caption='+media_url_encoded+'&link='+media_url_encoded+'&redirect_uri='+media_url_encoded+'&picture='+thumb;
+            share_url = 'https://www.facebook.com/dialog/feed?app_id=1902799049933562&display=popup&description='+fbDesc+'&caption='+media_url_encoded+'&link='+media_url_encoded+'&redirect_uri='+media_url_encoded+'&picture='+absurl+imgFolder+thumb;
         }
         else if(service == 'twitter'){
             share_url = 'https://twitter.com/share?url='+media_url_encoded+'&text='+title+twitter_via+twitter_tags;

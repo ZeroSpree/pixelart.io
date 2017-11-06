@@ -20,7 +20,9 @@ lang="{{ page.lang | default: site.lang | default: "en" }}"
                              data-share-fb-caption="{{site.facebook_share_caption}}"
                              data-share-fb-description="{{site.facebook_share_description}}"
                              data-share-tw-username="{{site.twitter_username}}"
-                             data-share-sitename="{{site.absurl}}">
+                             data-share-sitename="{{site.absurl}}"
+                             data-share-imgfolder="{{site.imgfolder}}"
+                             data-share-fb-appid="{{site.facebook_appid}}">
                         {{ content }}
                     </section>
                     {% include partials/spinner.html %}
