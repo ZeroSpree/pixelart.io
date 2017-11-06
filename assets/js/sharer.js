@@ -26,7 +26,7 @@ $(function(){
         media_url_encoded = encodeURIComponent(media_url);
 
         if(service == 'facebook'){
-            share_url = 'https://www.facebook.com/dialog/feed?app_id=1902799049933562&display=popup&description='+fbDesc+'&caption='+media_url_encoded+'&link='+media_url_encoded+'&redirect_uri='+media_url_encoded+'&picture='+absurl+imgFolder+thumb;
+            share_url = 'https://www.facebook.com/dialog/feed?app_id='+fbAppId+'&display=popup&description='+fbDesc+'&caption='+media_url_encoded+'&link='+media_url_encoded+'&redirect_uri='+media_url_encoded+'&picture='+absurl+imgFolder+thumb;
         }
         else if(service == 'twitter'){
             share_url = 'https://twitter.com/share?url='+media_url_encoded+'&text='+title+twitter_via+twitter_tags;
