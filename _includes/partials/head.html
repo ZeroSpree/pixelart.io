@@ -15,7 +15,7 @@
         {{ site.title | escape }}
     {% endif %}
 {% endcapture %}
-{% capture metaImage %}{% if page.splash %}{% if page.splash contains "http" %}{{ page.splash }}{% else %}{{site.url}}/{{ page.splash }}{% endif %}{% else %}{{site.url}}{{site.imgfolder}}{{ site.splash }}{% endif %}{% endcapture %}
+{% capture metaImage %}{% if page.splash %}{% if page.splash contains "http" %}{{ page.splash }}{% else %}{{site.url}}{{site.imgfolder}}{{ page.splash }}{% endif %}{% else %}{{site.url}}{{site.imgfolder}}{{ site.splash }}{% endif %}{% endcapture %}
 {% capture pageURL %}{{ page.url | replace:'index.html','' | absolute_url }}{% endcapture %}
 
 <!-- TODO
