@@ -2,7 +2,7 @@
 layout: post
 title: "The art of Michael Myers: X-Men Apocalypse Pixel Art"
 date: 2017-11-06T19:26:00Z
-categories: home featured artists character michael-myers 
+categories: home featured character michael-myers 
 meta_description: 
 splash: "2017-11-06-the-art-of-michael-myers-x-men-apocalypse-pixel-art/the-art-of-michael-myers-x-men-apocalypse-pixel-art_splash.png"
 social_splash: 

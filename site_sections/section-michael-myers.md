@@ -1,6 +1,6 @@
 ---
 layout: "section"
-headernav: "true"
+headernav: "false"
 iscreator: "true"
 anchortext: "Michael Myers"
 section_name: "michael-myers"
