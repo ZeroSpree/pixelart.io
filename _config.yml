@@ -23,8 +23,9 @@ ga_id: UA-75349601-1
 
 ############################################################
 # Template Settings
-logo_html: 'PIXEL<span>ART</span>'
+logo_html: 'PIXELART<span>.IO</span>'
 sidebar_featured_headline: 'Featured pixels'
+sidebar_featured_creators_headline: 'Featured Artists' # OPTIONAL | FALSE
 sidebar_follow_headline: 'Follow PIXELART.IO'
 
 
