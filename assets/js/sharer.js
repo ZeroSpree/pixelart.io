@@ -35,10 +35,10 @@ $(function(){
             share_url = 'https://plus.google.com/share?url='+media_url_encoded;
         }
         else if(service == 'tumblr'){
-            share_url = 'http://tumblr.com/share/link?url='+media_url_encoded+'&content='+thumb+'&posttype=photo'+tumblr_tags+'&show-via='+media_url;
+            share_url = 'http://tumblr.com/share/link?url='+media_url_encoded+'&content='+absurl+imgFolder+thumb+'&posttype=photo'+tumblr_tags+'&show-via='+media_url;
         }
         else if(service == 'pinterest'){
-            share_url = 'http://pinterest.com/pin/create/button/?url='+media_url_encoded+'&description='+title+' found at '+absurl+'&media='+thumb;
+            share_url = 'http://pinterest.com/pin/create/button/?url='+media_url_encoded+'&description='+title+' found at '+absurl+'&media='+absurl+imgFolder+thumb;
         }
         else if(service == 'reddit'){
             share_url = 'http://www.reddit.com/submit?url='+media_url_encoded+'&title='+title+' found at '+absurl;
