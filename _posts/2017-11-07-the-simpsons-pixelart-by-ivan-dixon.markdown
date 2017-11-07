@@ -2,7 +2,7 @@
 layout: post
 title: "The Simpsons pixelart by Ivan Dixon"
 date: 2017-11-07T19:13:00Z
-categories: home featured character gif ivan-dixon 
+categories: ivan-dixon 
 meta_description: 
 splash: 
 social_splash: "2017-11-07-the-simpsons-pixelart-by-ivan-dixon/the-simpsons-pixelart-by-ivan-dixon_social_splash.png"
