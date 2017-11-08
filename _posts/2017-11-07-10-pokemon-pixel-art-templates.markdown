@@ -4,7 +4,7 @@ title: "10 Pokemon Pixel Art Templates"
 date: 2017-11-07T21:24:00Z
 categories: home character templates 
 meta_description: 
-splash: "2017-11-07-10-pokemon-pixel-art-templates/10-pokemon-pixel-art-templates_splash.png"
+splash: "2017-11-07-10-pokemon-pixel-art-templates/10-pokemon-pixel-art-templates_splash.jpeg"
 social_splash: 
 videosplash: 
 splash_credits_title: "Splash Image by Nonamewayward"
