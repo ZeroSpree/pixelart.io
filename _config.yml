@@ -20,7 +20,7 @@ share_hashtags: "pixelart" # OPTIONAL . false | "tags, for, twitter, &, tumblr"
 splash: image.jpg
 
 ga_id: UA-75349601-1
-
+site_verification: YmVoqteYV2uUrrnR8rBjmbwP40Ytfza3ar95opJSUj4
 ############################################################
 # Template Settings
 logo_html: 'PIXELART<span>.IO</span>'

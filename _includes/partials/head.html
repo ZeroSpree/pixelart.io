@@ -30,6 +30,9 @@ amp canonical
 
     <title>{{ metaTitle }}</title>
     <meta name="description" content="{{ metaDescription | normalize_whitespace }}">
+    {% if site.site_verification %}
+    <meta name="google-site-verification" content="{{site.site_verification}}" />
+    {% endif %}
 
     <meta property="og:url" content="{{ pageURL }}">
     <meta property="og:type" content="website">
