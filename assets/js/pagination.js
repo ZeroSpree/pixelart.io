@@ -40,6 +40,7 @@ $(function(){
 
                     processRequest = true;
                     checkDuplicates();
+                    $(window).trigger('loadMoreCallback');
 
                     if( window.ga ) {
                         ga('send', {

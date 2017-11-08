@@ -22,7 +22,7 @@
     </div>
 {% elsif page.splash %}
     <div class="posts__splash">
-        <img class="posts__splash-img" data-src="{{ page.splash }}" alt="{{ page.title | escape }}" />
+        <img class="posts__splash-img" src="{{site.imgfolder}}{{ page.splash }}" alt="{{ page.title | escape }}" />
         {% if page.splash_credits_title %}
             {% if page.splash_credits_url %}
                 <a href="{{page.splash_credits_url}}" class="posts__splash-credit" target="_blank">{{ page.splash_credits_title }}</a>
