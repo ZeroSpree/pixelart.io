@@ -11,5 +11,7 @@ creator_avatar: "https://pbs.twimg.com/profile_images/793446094810132480/gvQImFG
 creator_website: "drawsgood.com"
 creator_twitter: "drawsgood"
 creator_dribbble: "drawsgood"
+creator_tumblr: "drawsgood"
+creator_society6: "drawsgood"
 permalink: /michael-myers/
 ---
