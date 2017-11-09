@@ -20,7 +20,7 @@ layout: null
             <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
             <changefreq>weekly</changefreq>
             <image:image>
-               <image:loc>{{ site.absurl }}/assets/img/{{ post.splash }}</image:loc>
+               <image:loc>{{ site.absurl }}{{site.imgfolder}}{{ post.splash }}</image:loc>
                <image:caption>{{ post.title }}</image:caption>
             </image:image>
         </url>
