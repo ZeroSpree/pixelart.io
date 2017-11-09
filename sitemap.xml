@@ -19,10 +19,12 @@ layout: null
             <loc>{{ site.absurl }}{{ post.url }}</loc>
             <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
             <changefreq>weekly</changefreq>
-            <image:image>
-               <image:loc>{{ site.absurl }}{{site.imgfolder}}{{ post.splash }}</image:loc>
-               <image:caption>{{ post.title }}</image:caption>
-            </image:image>
+            {% if post.splash %}
+                <image:image>
+                   <image:loc>{{ site.absurl }}{{site.imgfolder}}{{ post.splash }}</image:loc>
+                   <image:caption>{{ post.title }}</image:caption>
+                </image:image>
+            {% endif %}
         </url>
     {% endfor %}
 </urlset>
