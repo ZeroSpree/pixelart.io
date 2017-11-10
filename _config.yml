@@ -34,9 +34,9 @@ collections:
 sass: 
   sourcemap: true
   style: expanded
-  line_comments: true
+  line_comments: false
   trace_selectors: false
-  debug_info: true
+  debug_info: false
 future: true
 pagination: 
   enabled: true

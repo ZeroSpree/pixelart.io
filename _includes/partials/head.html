@@ -41,8 +41,12 @@ amp canonical
     <meta property="og:title" content="{{ metaTitle }}">
     <meta property="og:description" content="{{ metaDescription | normalize_whitespace }}">
     <meta property="og:site_name" content="{{site.title}}">
+    {% if metaImage %}
     <meta property="og:image" content="{{ metaImage }}">
     <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:image" content="{{ metaImage }}">
+    <meta name="twitter:image:src" content="{{ metaImage }}">
+    {% endif %}
 
     <meta name="twitter:card" content="summary_large_image">
     {% if site.twitter_username %}
@@ -51,8 +55,6 @@ amp canonical
     <meta name="twitter:url" content="{{ pageURL }}">
     <meta name="twitter:title" content="{{ metaTitle }}">
     <meta name="twitter:description" content="{{ metaDescription | normalize_whitespace }}">
-    <meta name="twitter:image" content="{{ metaImage }}">
-    <meta name="twitter:image:src" content="{{ metaImage }}">
 
     {% if page.layout == 'post' %}
         {% if site.twitter_username %}
@@ -61,7 +63,9 @@ amp canonical
         <meta property="og:type" content="article" />
         <meta itemprop="name" content="{{ metaTitle }}">
         <meta itemprop="description" content="{{ metaDescription | normalize_whitespace }}">
+        {% if metaImage %}
         <meta itemprop="image" content="{{ metaImage }}">
+        {% endif %}
         {% if page.amp %}
         <link rel="amphtml" href="{{site.url}}/amp{{ page.url | replace:'index.html','' | relative_url }}">
         {% endif %}
