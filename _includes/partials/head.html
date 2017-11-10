@@ -41,7 +41,7 @@ amp canonical
     <meta property="og:title" content="{{ metaTitle }}">
     <meta property="og:description" content="{{ metaDescription | normalize_whitespace }}">
     <meta property="og:site_name" content="{{site.title}}">
-    {% if metaImage %}
+    {% if metaImage != nil and metaImage != "" %}
     <meta property="og:image" content="{{ metaImage }}">
     <meta property="og:image:type" content="image/jpeg" />
     <meta name="twitter:image" content="{{ metaImage }}">
@@ -63,7 +63,7 @@ amp canonical
         <meta property="og:type" content="article" />
         <meta itemprop="name" content="{{ metaTitle }}">
         <meta itemprop="description" content="{{ metaDescription | normalize_whitespace }}">
-        {% if metaImage %}
+        {% if metaImage != nil and metaImage != "" %}
         <meta itemprop="image" content="{{ metaImage }}">
         {% endif %}
         {% if page.amp %}
