@@ -4,7 +4,7 @@ title: "7 Fresh Pixel Art Logos"
 date: 2017-11-11T23:48:00Z
 categories: home featured logo 
 meta_description: 
-splash: "2017-11-11-7-fresh-pixel-art-logos/7-fresh-pixel-art-logos_splash.jpg:large"
+splash: "2017-11-11-7-fresh-pixel-art-logos/7-fresh-pixel-art-logos_splash.jpg"
 social_splash: 
 videosplash: 
 splash_credits_title: 
