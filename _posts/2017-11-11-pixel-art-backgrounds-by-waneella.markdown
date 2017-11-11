@@ -2,7 +2,7 @@
 layout: post
 title: "5 Pixel art backgrounds by Waneella"
 date: 2017-11-11T23:33:00Z
-categories: home featured scenery 
+categories: home featured gif scenery 
 meta_description: 
 splash: "2017-11-11-pixel-art-backgrounds-by-waneella/pixel-art-backgrounds-by-waneella_splash.png"
 social_splash: 
