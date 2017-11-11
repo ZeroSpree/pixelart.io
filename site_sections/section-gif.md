@@ -1,6 +1,6 @@
 ---
 layout: "section"
-anchortext: "GIF"
+anchortext: "Animated"
 section_name: "gif"
 title: "Pixel Art GIFs and Animations"
 headernav: "true"
