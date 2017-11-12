@@ -165,11 +165,6 @@ a.posts__splash-credit:hover {
     border-left: 5px solid $posts-blockquote-border;
 }
 
-.posts__footer {
-  border-top: 1px solid #F3F3F3;
-  margin-top: 30px;
-  padding-top: 30px;
-}
 /*Posts Read More*/
 .posts__readmore {}
 .posts__readmore-btn {
@@ -252,6 +247,11 @@ a.posts__splash-credit:hover {
 }
 
 @media (min-width:500px) {
+  .posts__footer {
+    border-top: 1px solid #F3F3F3;
+    margin-top: 30px;
+    padding-top: 30px;
+  }
   .posts__readmore-btn {
     background: $posts-readmore-bg;
     padding: 0 20px;
