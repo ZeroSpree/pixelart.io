@@ -1,7 +1,7 @@
 ---
 layout: section_pagination
-permalink: /pagination/isometric/
+permalink: /pagination/bjgdesign/
 pagination:
   enabled: true
-  category: isometric
+  category: bjgdesign
 ---
