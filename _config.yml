@@ -1,6 +1,6 @@
 is_production: true
-baseurl: "/JekyllCMS"
-url: "https://zerospree.github.io"
+baseurl: "/"
+url: "http://pixelart.io"
 
 name: pixelart.io # for og:site_name
 title: For your Pixel Art inspiration needs # default meta title
