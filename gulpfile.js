@@ -150,7 +150,7 @@ gulp.task('build:jekyll:local', function() {
 // Builds site anew using local config.
 gulp.task('build:local', function(callback) {
     runSequence(
-        //'git:pull',
+        'git:pull',
         'clean',
         ['build:scripts:local', 
         'build:images:local', 
