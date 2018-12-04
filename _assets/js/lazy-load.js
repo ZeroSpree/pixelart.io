@@ -27,17 +27,7 @@
     }
 })();
 
-    var bLazy = new Blazy({
-        selector: '[data-src]',
-        offset: 100,
-        success: function(element){
-            setTimeout(function(){
-                console.log('ohai')
-            }, 200);
-        },
-        error: function(ele, msg){
-            setTimeout(function(){
-                console.log(msg)
-            }, 200);
-        }
-    });
+var bLazy = new Blazy({
+    selector: '[data-src]',
+    offset: 400
+});

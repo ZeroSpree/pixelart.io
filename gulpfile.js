@@ -54,6 +54,7 @@ gulp.task('build:styles:local', ['build:styles'], function() {
     })
       .pipe(postcss([autoprefixer({ browsers: ['last 2 versions', 'ie >= 10'] })]) )
       .pipe(gulp.dest(paths.jekyllCssFiles))
+      .pipe(gulp.dest(paths.siteCssFiles))
       .pipe(browserSync.stream())
       .on('error', gutil.log);
 });
@@ -78,6 +79,7 @@ gulp.task('build:scripts', function() {
 gulp.task('build:scripts:local', ['build:scripts'], function() {
     return gulp.src(scripts, { base: paths.jsFiles })
         .pipe(gulp.dest(paths.jekyllJsFiles))
+        .pipe(gulp.dest(paths.siteJsFiles))
         .on('error', gutil.log);
 });
 
