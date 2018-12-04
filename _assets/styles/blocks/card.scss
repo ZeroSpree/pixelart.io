@@ -1,0 +1,60 @@
+.cards {
+  margin-top: 90px;
+}
+
+.headline + .cards {
+  margin-top: 32px;
+}
+
+.card {
+  margin-bottom: 48px;
+
+  .ar {
+    box-shadow: inset 0 0 0 1px rgba(0,0,0, .1);
+    position: relative;
+    top: 0;
+    transition: top .15s linear;
+    @include pixelated;
+
+    &.is-contain {
+      background-size: contain;
+    }
+  }
+
+  &__anchor {
+    display: block;
+
+    &:hover,
+    &:active,
+    &:focus {
+      .ar {
+        top: -10px;
+      }
+
+      .card__title {
+        color: $blue;
+      }
+    }
+  }
+
+  &__title {
+    margin: 16px 0 8px;
+    font-size: 1.1em;
+    font-weight: 400;
+    font-family: 'Fredoka One', sans-serif;
+  }
+
+  .post__categories li:first-child a {
+    margin-left: 1px;
+  }
+}
+
+@include mq(md) {
+  .card {
+    margin-bottom: 64px;
+
+    &__title {
+      font-size: 1.2em;
+    }
+  }
+}

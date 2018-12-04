@@ -1,0 +1,10 @@
+{% raw %}
+<div class="ee__module field field-select" data-name="folder" v-if="sections.length">
+    <h3>Parent Section</h3>
+
+    <select v-model="editor.parent">
+        <option class="field-select__placeholder" value="">Is parent section</option>
+        <option :value="section.path" v-for="section in sections">{{section.title}}</option>
+    </select>
+</div>
+{% endraw %}

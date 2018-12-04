@@ -1,0 +1,7 @@
+<div class="ee__module field field-select" data-name="layout">
+    <h3>Layout type</h3>
+
+    <select v-model="editor.layout">
+        {% raw %}<option v-for="layout in layouts">{{layout}}</option>{% endraw %}
+    </select>
+</div>

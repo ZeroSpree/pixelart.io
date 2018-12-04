@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="page-header flex--space-evenly wrapper--narrow">
+    <h1 class="headline headline--large">
+        {%- if page.displayTitle -%}
+            {{ page.displayTitle | replace:'\n', '<br/>' }}
+        {%- else -%}
+            Pixel Art<br/>{{ page.title }}
+        {%- endif -%}
+    </h1>
+
+    {%- include scroll-down.html -%}
+</div>
+
+<section id="content">
+    <div class="row cards">
+        {%- for post in site.categories[page.slug] -%}
+            {%- include posts/card.html -%}
+        {%- endfor -%}
+    </div>
+</section>

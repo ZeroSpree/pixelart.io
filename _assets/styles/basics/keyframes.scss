@@ -1,0 +1,11 @@
+@keyframes bounce-h {
+  to {
+    transform: translateX(25%);
+  }
+}
+
+@keyframes bounce-v {
+  to {
+    transform: translateY(25%);
+  }
+}

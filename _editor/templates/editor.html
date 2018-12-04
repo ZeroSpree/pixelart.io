@@ -1,0 +1,32 @@
+{% extends "./base_editor.html" %}
+
+{% set editorType = 'article' %}
+{% set actionFilter = 'tojekyllurl' %}
+{% set titlePlaceholder = 'Add a Headline...' %}
+
+{% block fields %}
+    {% include './partials/slug.html' %}
+    {% include './partials/hero_image.html' %}
+
+    <div class="row">
+        <div>
+            {% include './partials/headline.html' %}
+            {% include './partials/placements/placement-left.html' %}
+            {% include './partials/quill.html' %}
+            {% include './partials/raw.html' %}
+        </div>
+
+        <div>
+            {% include './partials/date.html' %}
+            {% include './partials/layout.html' %}
+            {% include './partials/permalink.html' %}
+            {% include './partials/folder.html' %}
+            {% include './partials/sections.html' %}
+            {% include './partials/placements/placement-right.html' %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block extraScripts %}
+    <script src="/js/editor/sections.js"></script>
+{% endblock %}

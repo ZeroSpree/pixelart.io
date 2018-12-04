@@ -1,0 +1,38 @@
+$site-max-width: 100%;
+
+$row-class: '.row';
+$column-class: '.col';
+$column-count : 12;
+
+// Global site breakpoints
+// (!) Rememeber to edit $site-gutter and $grid-gutter as well
+$site-breakpoints : (
+  sm: 0px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1440px
+);
+
+// 'r' mixin default breakpoints
+// Define default breakpoints for the 'r' mixin instead of looping $site-breakpoints.
+// Because if more $site-breakpoints are introduced at a later point
+// this will make sure the already used mixins are not affected.
+$r-default-breakpoints: sm, md, lg, xl;
+
+// Left-right spacings for site container
+// (!) keys must match $site-breakpoints
+$site-gutter : (
+  sm: 4px,
+  md: 8px,
+  lg: 12px,
+  xl: 16px
+);
+
+// Columns gutter spacings
+// (!) keys must match $site-breakpoints
+$column-gutter : (
+  sm: 8px,
+  md: 16px,
+  lg: 24px,
+  xl: 32px
+);

@@ -1,0 +1,21 @@
+{% raw %}
+
+<div class="ee__module ee__article-permalink">
+    <h3 class="inline">Article Slug:</h3>
+
+<!-- new article -->
+    <template v-if="!extra.slug">
+        <span v-if="editor.permalink">{{editor.permalink}}/</span><span v-if="extra.permalink">{{extra.permalink}}/</span>
+    </template>
+
+    <!-- existing article -->
+    <template v-else>
+        <!-- If custom permalink -->
+        <span v-if="editor.permalink">{{editor.permalink}}</span>
+        <!-- If no custom permalink-->
+        <span v-else>{{$options.filters.tojekyllurl(extra.slug)}}</span>
+    </template>
+
+</div>
+
+{% endraw %}

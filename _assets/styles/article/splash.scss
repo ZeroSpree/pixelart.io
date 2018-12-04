@@ -1,0 +1,28 @@
+.article {
+
+  .article__splash {
+    margin-top: 0;
+    margin-bottom: 48px;
+    position: relative;
+    background: 0;
+
+    &-credits {
+      background: rgba($white, .85);
+      padding: 4px 10px 2px;
+      font-size: 11px;
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      a {
+        font-weight: 700;
+      }
+    }
+
+    @include mq(md) {
+      margin-bottom: 96px;
+    }
+  }
+
+}

@@ -1,0 +1,77 @@
+.listing {
+
+  .row > :last-child:not(:only-child),
+  .row > :last-child:not(:only-child) > * {
+    text-align: right;
+  }
+
+  &__header {
+    line-height: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #777D94;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background: $header-gray;
+    box-shadow: inset 0 1px 0 $white;
+
+    &:not(:first-child) {
+      border-top: 1px solid $border-gray;
+    }
+
+    &--actions {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+
+  &__row {
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-top: 1px solid $border-gray;
+    border-bottom: 1px solid $border-gray;
+    margin-bottom: -1px;
+
+    > :last-child {
+      text-align: right;
+      white-space: nowrap;
+    }
+  }
+
+  .js--sort-handle {
+    display: inline-block;
+    padding: 4px 5px 6px;
+    line-height: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 12px 0 -5px;
+
+    .icon {
+      margin: 0;
+    }
+
+    &:hover,
+    &:active {
+      box-shadow: 0 0 0 1px $border-gray;
+
+      .icon {
+        opacity: .6;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  &__list li {
+    display: inline-block;
+
+    &:not(:last-child) {
+      padding-right: 16px;
+    }
+  }
+}

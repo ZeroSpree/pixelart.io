@@ -1,0 +1,38 @@
+.page-header {
+  position: relative;
+  min-height: calc(100vh - 160px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .headline {
+    text-align: center;
+  }
+
+  .scroll-down {
+    left: 50%;
+    width: 64px;
+    height: 128px;
+    background: $blue-lightest;
+    box-shadow: 0 0 0 1px $blue-light;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    svg {
+      color: rgba($blue, .6);
+      top: -12px;
+      position: relative;
+      width: 48px;
+      height: 48px;
+      @include bounceV;
+    }
+  }
+}
+
+@include mq(md) {
+  .page-header {
+    min-height: calc(100vh - 280px);
+  }
+}

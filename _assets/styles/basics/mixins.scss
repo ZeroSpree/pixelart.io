@@ -1,0 +1,180 @@
+/*
+ * Media query shorthand, to be used with variables from $site-breakpoints
+ * Defaults to min-width
+ * 
+ * Usage: @include mq(lg, min/max(optional) ) { ... }
+ */
+
+@function breakpoint-min($name, $breakpoints: $site-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+@mixin mq($name, $type: min) {
+  $min: breakpoint-min($name);
+
+  @if $min {
+    @if $type == max {
+        $min: $min - 1px;
+    }
+
+    @media ( #{$type}-width: $min ) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+
+/*
+ * Hide from screen readers and browsers
+ * @class .is-hidden
+ */
+
+@mixin is-hidden() {
+  display: none !important;
+  visibility: hidden;
+}
+
+
+/*
+ * Show for screen readers and browsers
+ * Defaults to display: block;
+ * @class .is-visible
+ */
+
+@mixin is-visible($state: 'block') {
+  display: unquote($state) !important;
+  visibility: visible;
+}
+
+
+/*
+ * Hide from browsers, but not from screen readers
+ * @class .a11y
+ */
+
+@mixin a11y() {
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px,1px,1px,1px);
+  clip-path: inset(1px);
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  background: #000;
+  color: #fff;
+  // fix testing software contrast false positives
+  background: #000;
+  color: #fff;
+}
+
+
+/*
+ * Truncate text with '...' at the end
+ * @class .ellipsis
+ * @param width (default 100%)
+ */
+
+@mixin ellipsis($w: 100%) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: $w;
+}
+
+
+/*
+ * Calculate padding-top percentage from width and height variables.
+ * Useful for setting responsive aspect ratio.
+ * 
+ * Usage: @include ar-padding(16, 9);
+ */
+
+@mixin ar-padding($w, $h) {
+  padding-top: $h / $w * 100%;
+}
+
+
+/*
+ * Breakpoint aware aspect ratio class generator.
+ * 
+ * Usage: @include aspect-ratio-create(16, 9);
+ * Generated class: .ar--16-9
+ * 
+ * Usage: @include aspect-ratio-create(16, 9, md);
+ * Generated class: .ar--md-16-9
+ */
+@mixin ar-create-class($w, $h, $bp : false) {
+  $min: breakpoint-min($bp);
+  $bpClassName : if($min, -#{$bp}, '');
+
+  @include mq($min) {
+    .ar-#{$bpClassName}-#{$w}-#{$h} {
+      @include ar-padding($w, $h);
+    }
+  }
+}
+
+/*
+ * Aspect ratio all-in-one.
+ * Useful for responsive aspect ratio.
+ * Defaults to 16:9 aspect ratio
+ * 
+ * Usage: @include ar(360, 180);
+ * @class: .ar
+ * 
+ * Class .ar should be used together with breakpoint aware '.ar--$bp-$w-$h' classes.
+ * Example: class="ar ar--1-1 ar--md-2-1 ar--lg-3-1"
+ */
+@mixin ar($w: 16, $h: 9) {
+  position: relative;
+  height: 0;
+  background-color: $bg-placeholder;
+  width: 100%;
+  @include ar-padding($w, $h);
+
+  // common for elements with a background-image
+  &[style] {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  // common for keeping video aspect ratios
+  > iframe,
+  > video,
+  > .ar__fill {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@mixin pixelated() {
+  image-rendering: optimizeSpeed;             /* Older versions of FF          */
+  image-rendering: -moz-crisp-edges;          /* FF 6.0+                       */
+  image-rendering: -webkit-optimize-contrast; /* Safari                        */
+  image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
+  image-rendering: pixelated;                 /* Awesome future-browsers       */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE                            */
+}
+
+@mixin bounceH {
+  animation: bounce-h .3s ease-out infinite alternate;
+}
+
+@mixin bounceV {
+  animation: bounce-v .4s ease-in infinite alternate;
+}
+

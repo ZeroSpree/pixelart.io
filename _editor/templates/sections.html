@@ -1,0 +1,73 @@
+{% extends "./base.html" %}
+
+{% block content %}
+{% raw %}
+
+<main v-cloak id="app" class="wrapper">
+    <ul class="listing">
+        <li class="row listing__header listing__header--actions">
+            <div>
+                <a class="button" href="/section_editor">
+                    <img src="/svg/plus-white.svg" class="icon">
+                    New Section
+                </a>
+            </div>
+        </li>
+
+        <li class="row listing__header">
+            <span class="col-1">Order</span>
+            <span class="col-6">Title</span>
+            <span class="col-1">Layout</span>
+            <span class="col-1">Parents</span>
+            <span class="col-1">Visibility</span>
+            <span class="col-2">Actions</span>
+        </li>
+
+        <li class="row listing__row" :data-path="section.path" v-for="section in sections">
+            <div class="col-1">
+                <span class="js--sort-handle">
+                    <img src="/svg/move.svg" class="icon">
+                </span>
+
+                <span>{{ section.order }}</span>
+            </div>
+
+            <div class="col-6">
+                <a 
+                    class="listing__title"
+                    :href="'/section_editor#' + section.path">
+                    <img src="/svg/edit.svg" class="icon"> {{ section.title }}
+                </a>
+            </div>
+
+            <div class="col-1">
+                <span>{{ section.layout }}</span>
+            </div>
+
+            <div class="col-1">
+                <span v-if="section.parent">{{ section.parent }}</span>
+            </div>
+
+            <div class="col-1">
+                <span v-if="section.unlisted" class="color--gray">Hidden</span>
+                <span v-else class="color--green">Visible</span>
+            </div>
+
+            <div class="col-2">
+                <a 
+                    class="button" 
+                    target="_blank"
+                    :href="'http://localhost:4500'+$options.filters.tojekyllurlsection(section.path)">
+                    <img src="/svg/link-white.svg" class="icon"> Preview
+                </a>
+            </div>
+        </li>
+    </ul>
+</main>
+
+{% endraw %}
+{% endblock %}
+
+{% block scripts %}
+    <script src="/js/sections/index.js"></script>
+{% endblock %}

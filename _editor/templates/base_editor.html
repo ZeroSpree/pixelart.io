@@ -1,0 +1,35 @@
+{% extends "./base.html" %}
+
+{% block styles %}
+    <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <main v-cloak class="wrapper js--{{editorType}}-editor" id="editor">
+        {% include './partials/actions.html' %}
+
+        <div class="ee">
+            {% block fields %}{% endblock %}
+        </div>
+    </main>
+{% endblock %}
+
+{% block scripts %}
+    <!-- Quill editor -->
+    <script src="/js/lib/quill.min.js"></script>
+    <script src="/js/editor/quill.js"></script>
+    <script src="/js/editor/quill-blots/FigureBlot.js"></script>
+
+    <!-- Init -->
+    <script src="config_{{editorType}}.js"></script>
+    <script src="/js/editor/fields/_processFields.js"></script>
+    <script src="/js/editor/index.js"></script>
+    <script src="/js/editor/layout.js"></script>
+    {% block extraScripts %}{% endblock %}
+
+    <!-- Actions -->
+    <script src="/js/editor/actions/upload.js"></script>
+    <script src="/js/editor/actions/save.js"></script>
+    <script src="/js/editor/actions/delete.js"></script>
+    <script src="/js/editor/actions/remove-image.js"></script>
+{% endblock %}

@@ -1,0 +1,75 @@
+#editor {
+  .ql-container {
+    height: auto;
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    border-color: $border-gray;
+  }
+
+  .ql-editor {
+    min-height: 250px;
+  }
+
+  /* Prevent page 'jump' on copy-paste */
+  .ql-clipboard {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  .ql-toolbar {
+    position: sticky;
+    top: 50px;
+    z-index: 10;
+    background: $white;
+    border-color: $border-gray;
+
+    .js--upload-localfile {
+      float: left;
+    }
+
+    .upload-localfile {
+      display: inline-block;
+      height: 24px;
+      padding: 3px 5px;
+      cursor: pointer;
+      user-select: none;
+
+      input {
+        display: none;
+      }
+
+      &:hover {
+        color: $quill-blue;
+      }
+    }
+
+    .ql-formats {
+      button {
+        color: $black;
+
+        &:hover {
+          color: $quill-blue;
+        }
+      }
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  &-body {
+    p {
+      margin-bottom: 20px;
+    }
+
+    figure {
+      margin: 20px 0;
+    }
+  }
+}

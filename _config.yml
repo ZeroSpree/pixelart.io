@@ -1,0 +1,32 @@
+is_production: true
+baseurl: "/JekyllCMS"
+url: "https://zerospree.github.io"
+
+name: pixelart.io # for og:site_name
+title: For your Pixel Art inspiration needs # default meta title
+description: Plenty of Pixel Art animations, characters, games and more! # default meta description
+image: false
+google_site_verification: false # optional, Google Search Console verification
+twitter_site: false # optional, for twitter cards - Twitter site account, without the @
+twitter_creator: false # optional, for twitter cards - Twitter author account, without the @
+
+markdown: kramdown
+permalink: /:title/
+future: true
+
+exclude: ["_assets",
+          "node_modules", 
+          "Gemfile",
+          "Gemfile.lock",
+          "README.md",
+          "gulpfile.js", 
+          "gulpfile.git.js", 
+          "gulpfile.editor.js", 
+          "gulpfile.paths.js",
+          "package.json", 
+          "package-lock.json"]
+
+collections:
+  sections:
+    output: true
+    permalink: /:title/

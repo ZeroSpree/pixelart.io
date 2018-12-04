@@ -1,0 +1,29 @@
+{% extends "./base_editor.html" %}
+
+{% set editorType = 'sections' %}
+{% set actionFilter = 'tojekyllurlsection' %}
+{% set titlePlaceholder = 'Section Title...' %}
+
+{% block fields %}
+    {% include './partials/hero_image.html' %}
+
+    <div class="row">
+        <div>
+            {% include './partials/headline.html' %}
+            {% include './partials/placements/placement-left.html' %}
+            {% include './partials/quill.html' %}
+            {% include './partials/raw.html' %}
+        </div>
+
+        <div>
+            {% include './partials/layout.html' %}
+            {% include './partials/permalink.html' %}
+            {% include './partials/parent-section.html' %}
+            {% include './partials/placements/placement-right.html' %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block extraScripts %}
+    <script src="/js/editor/sections-parent.js"></script>
+{% endblock %}

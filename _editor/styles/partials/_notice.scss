@@ -1,0 +1,19 @@
+.notice {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $yellow;
+  padding: 5px 20px;
+  border-radius: 0 0 3px 3px;
+  box-shadow: 0 0 7px 3px rgba(0,0,0,0.8);
+  font-weight: 600;
+  text-align: center;
+  display: none;
+}
+
+.notice--error {
+  background: linear-gradient(#e74c3c, #ce4436);
+  color: $white;
+}

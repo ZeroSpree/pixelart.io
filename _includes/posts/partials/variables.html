@@ -1,0 +1,158 @@
+{%- comment -%}
+@var: postURL
+@type: String
+@returns: /a-section-folder/the-article-slug/
+{%- endcomment -%}
+{%- assign postURL = post.url | relative_url -%}
+
+
+{%- comment -%}
+@var: postDate
+@type: string
+@returns: Nov 11, 2018
+@documentation: https://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior
+{%- endcomment -%}
+{%- assign postDate = post.date | date: "%b %-d, %Y - %H:%M:%S" -%}
+
+
+{%- comment -%}
+@var: postTitle
+@type: String
+@returns: 'A post title'
+{%- endcomment -%}
+{%- assign postTitle = post.title -%}
+
+
+{%- comment -%}
+@var: postSubtitle
+@type: String
+@returns: 'A post subtitle'
+{%- endcomment -%}
+{%- assign postSubtitle = post.subtitle -%}
+
+
+{%- comment -%}
+@var: postExcerpt
+@type: String
+@returns: 'A post description...'
+{%- endcomment -%}
+{%- capture postExcerpt -%}
+    {%- if post.subtitle -%}
+        {{ post.subtitle }}
+    {%- else -%}
+        {{ post.excerpt }}
+    {%- endif -%}
+{%- endcapture -%}
+{%- assign postExcerpt = postExcerpt | strip_html | truncate: 150 | strip -%}
+
+
+{%- comment -%}
+@var: postClasses
+@type: String
+@returns: Post sections as classnames: 'is--character is--scenery'
+{%- endcomment -%}
+{%- capture postClasses -%}
+    {% for category in post.categories %}
+        is--{{category}}
+    {% endfor %}
+{%- endcapture -%}
+
+
+{%- comment -%}
+@var: isNarrow
+@type: string, flag
+@returns: 'is-narrow'
+{%- endcomment -%}
+{%- capture postIsNarrow -%}
+    {%- if post.isnarrow -%}is-narrow{%- endif -%}
+{%- endcapture -%}
+
+
+{%- comment -%}
+@var: isMedium
+@type: string, flag
+@returns: 'is-medium'
+{%- endcomment -%}
+{%- capture postIsMedium -%}
+    {%- if post.ismedium -%}is-medium{%- endif -%}
+{%- endcapture -%}
+
+
+{%- comment -%}
+@var: postSplash
+@type: Boolean
+@returns: true/false
+{%- endcomment -%}
+{%- assign postSplash = post.splash.image -%}
+
+
+{%- comment -%}
+@var: postSplashContain
+@type: String, flag
+@returns: 'is-contain'
+{%- endcomment -%}
+{%- capture postSplashContain -%}
+    {%- if post.splash.contain -%}is-contain{%- endif -%}
+{%- endcapture -%}
+
+
+{%- comment -%}
+@var: postSplashIsHidden
+@type: Boolean
+@returns: true/false
+{%- endcomment -%}
+{%- capture postSplashIsHidden -%}
+    {%- if postSplash -%}{{post.splash.ishidden}}{%- endif -%}
+{%- endcapture -%}
+
+
+{%- comment -%}
+@var: postSplashBg
+@type: string
+@returns: style="background-image:url('/uploads/img.jpg')"
+{%- endcomment -%}
+{%- capture postSplashBg -%}
+    {%- if postSplash -%}style="background-image:url('{{ postSplash | relative_url }}')"{%- endif -%}
+{%- endcapture -%}
+
+
+{%- comment -%}
+@var: postSplashBgLazy
+@type: string
+@returns: style="background-image:url('/uploads/img.jpg')"
+{%- endcomment -%}
+{%- capture postSplashBgLazy -%}
+    {%- if postSplash -%}data-src="{{ postSplash | relative_url }}"{%- endif -%}
+{%- endcapture -%}
+
+
+{%- comment -%}
+@var: postSplashImg
+@type: string
+@returns: <img src="/uploads/img.jpg">
+{%- endcomment -%}
+{%- capture postSplashImg -%}
+    {%- if postSplash -%}<img src="{{ postSplash | relative_url }}">{%- endif -%}
+{%- endcapture -%}
+
+
+{%- comment -%}
+@var: postSplashCreditsText
+@type: string
+@returns: 'Credits field text'
+{%- endcomment -%}
+{%- capture postSplashCreditsText -%}
+    {%- if postSplash -%}{{post.splash.credits}}{%- endif -%}
+{%- endcapture -%}
+
+
+{%- comment -%}
+@var: postSplashCreditsURL
+@type: string
+@returns: 'http://example.com'
+{%- endcomment -%}
+{%- capture postSplashCreditsURL -%}
+    {%- if postSplash -%}{{post.splash.creditsurl}}{%- endif -%}
+{%- endcapture -%}
+
+

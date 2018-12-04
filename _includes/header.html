@@ -1,0 +1,78 @@
+<header class="header">
+    <div class="wrapper">
+        <div class="row flex--space-between">
+            <div>
+                <a href="{{"/" | relative_url}}" class="logo">
+                    <span class="a11y">pixel</span>
+                    <span>a</span><span>r</span><span>t</span>
+                </a>
+            </div>
+
+            <div>
+                <button 
+                    class="js--drawer-toggle sandwich" 
+                    id="drawer-button" 
+                    aria-controls="drawer"
+                    aria-expanded="false" 
+                    aria-pressed="false">
+                    <span class="a11y">Toggle navigation menu</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav 
+    class="drawer is-hidden" 
+    id="drawer" 
+    aria-labelledby="drawer-button" 
+    aria-hidden="true" 
+    role="navigation"
+    data-allow-scroll="true" 
+    data-helper-class="drawer--is-open">
+    <div class="wrapper">
+
+        <ul class="drawer__menu">
+            {% assign sortedSections = site.sections | sort: "order" %}
+            {%- for section in sortedSections -%}
+                {%- if section.unlisted != true -%}
+
+                    {%- capture activeSection -%}
+                        {%- if section.url == page.url -%}is-active{%- endif -%}
+                    {%- endcapture -%}
+
+                    {%- unless section.parent -%}
+                        {%- capture subsections -%}
+                            {%- for subsection in sortedSections -%}
+                                {%- if subsection.parent == section.slug and subsection.unlisted != true -%}
+                                    {%- capture activeSubsection -%}
+                                        {%- if subsection.url == page.url -%}is-active{%- endif -%}
+                                    {%- endcapture -%}
+
+                                    <li>
+                                        <a class="{{ activeSubsection }}" href="{{ subsection.url | relative_url }}" {{ activeSubsection }}>{{ subsection.title }}</a>
+                                    </li>
+                                {%- endif -%}
+                            {%- endfor -%}
+                        {%- endcapture -%}
+
+                        <li>
+                            {%- if subsections == empty -%}
+                                <a class="{{ activeSection }}" href="{{ section.url | relative_url }}" {{ activeSection }}>{{ section.title }}</a>
+                            {%- else -%}
+                                <ul>
+                                    <li>
+                                        <a class="{{ activeSection }}" href="{{ section.url | relative_url }}" {{ activeSection }}>{{ section.title }}</a>
+                                    </li>
+                                    {{ subsections }}
+                                </ul>
+                            {%- endif -%}
+                        </li>
+                    {%- endunless -%}
+
+                {%- endif -%}
+            {%- endfor -%}
+        </ul>
+
+    </div>
+</nav>

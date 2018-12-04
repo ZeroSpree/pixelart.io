@@ -1,0 +1,58 @@
+html, body {
+  background: $gray;
+  font: 400 12px/16px "Open Sans", arial, sans-serif;
+  height: 100%;
+  color: $text-dark;
+}
+
+::placeholder {
+  font: italic 400 13px/16px 'Lora';
+  color: $gray-darker;
+}
+
+body {
+  padding-top: 90px;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.link {
+  color: $blue;
+}
+
+.info {
+  color: #888;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.icon {
+  width: 12px;
+  margin-right: 5px;
+  position: relative;
+  top: 1px;
+}
+
+.color--green {
+  color: $green;
+}
+
+.color--gray {
+  color: $text-light;
+}
+
+[v-cloak] {
+  display: none;
+}

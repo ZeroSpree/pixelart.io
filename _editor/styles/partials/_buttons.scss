@@ -1,0 +1,56 @@
+button,
+.button {
+  outline: 0;
+  font-size: 11px;
+  line-height: 22px;
+  text-align: center;
+  padding: 0 10px;
+  font-weight: bold;
+  border-radius: 3px;
+  border: 1px solid #DDDEE4;
+  background: linear-gradient(#2FC06D, #27ae60);
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0,0,0, .4);
+  border-color: #229653;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  text-align: left;
+
+  &:active {
+    top: 1px;
+  }
+
+  .icon {
+    width: 14px;
+    top: 3px;
+  }
+
+  &.button--full {
+    width: 100%;
+    text-align: center;
+  }
+
+  &.button--danger {
+    background: linear-gradient(#e74c3c, #ce4436);
+    border-color: #a5372c;
+  }
+
+  &.button--warn {
+    background: linear-gradient(#ffff66, #a7a73b);
+    border-color: #c1c156;
+    color: black;
+    text-shadow: 0 1px 0 rgba(255,255,255, 0.4);
+  }
+
+  &.button--reset {
+    background: 0;
+    border: 0;
+    padding: 0;
+  }
+
+  &.button--neutral {
+    color: #777d94;
+  }
+}

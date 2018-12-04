@@ -1,0 +1,75 @@
+.button {
+  color: $blue;
+  display: inline-block;
+  position: relative;
+  padding: 13px 20px 11px;
+  font-weight: 700;
+  font-size: .9em;
+  background: $blue-lightest;
+  box-shadow: 0 0 0 1px $blue-light;
+  line-height: 1.6;
+  border-radius: 50px;
+
+  /* e.g. Section hashtags */
+  &--small {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: .2px;
+    padding: 5px 7px 3px;
+    border-radius: 0;
+    margin: 8px;
+
+    svg {
+      width: 14px;
+      height: 14px;
+      top: -1px;
+      position: relative;
+      margin-left: 4px;
+    }
+  }
+
+  /* e.g. Share */
+  &--icon {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 16px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  /* e.g. View More */
+  &--arrow {
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 8px;
+    }
+
+    &:hover svg,
+    &:active svg,
+    &:focus svg {
+      @include bounceH;
+    }
+  }
+
+  &.is-active,
+  &:hover,
+  &:active,
+  &:focus {
+    background: $blue;
+    color: $white;
+  }
+
+  &:active {
+    top: 1px;
+  }
+
+}
+

@@ -1,0 +1,10 @@
+<div data-name="title" class="ee__module field field-richtext">
+    <div 
+        contenteditable="true" 
+        placeholder="{{titlePlaceholder}}" 
+        class="size--large"
+        v-html="editor.title"
+        @blur="textTrim" 
+        @keydown="headlineSlugHandler" 
+        @keyup="headlineSlugHandler"></div>
+</div>

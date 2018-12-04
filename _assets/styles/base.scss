@@ -1,0 +1,57 @@
+html {
+  color: $black;
+  background: $white;
+  font: 400 16px/1.6 Montserrat, sans-serif;
+}
+
+a, button, input {
+  outline: 0;
+}
+
+.link {
+  color: $blue;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+main {
+  display: block;
+  margin-top: 90px;
+}
+
+#content {
+  overflow: hidden;
+}
+
+.ta--c {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--space-around {
+    justify-content: space-around;
+  }
+
+  &--space-evenly {
+    justify-content: space-evenly;
+  }
+
+  &--space-between {
+    justify-content: space-between;
+  }
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+}
+

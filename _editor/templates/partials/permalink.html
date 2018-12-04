@@ -1,0 +1,11 @@
+<div v-if="!extra.slug" class="ee__module field field-text" data-name="permalink" >
+    <h3>Permalink</h3>
+    <input type="text" placeholder="/article-permalink/" v-model="extra.permalink" :disabled="!extra.isCustomSlug" @keydown="sanitizeSlug" @keyup="sanitizeSlug"/>
+
+    <div class="field field-checkbox">
+        <label>
+            <input type="checkbox" v-model="extra.isCustomSlug" @:change="headlineSlugHandler" />
+            <span class="field-checkbox__title">Use a custom permalink</span>
+        </label>
+    </div>
+</div>

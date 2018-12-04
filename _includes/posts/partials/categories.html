@@ -1,0 +1,11 @@
+{%- if post.categories != empty -%}
+    <ul class="flex flex--wrap post__categories">
+        {%- for section in site.sections -%}
+            {%- if post.categories contains section.slug and section.unlisted != true -%}
+                <li>
+                    <a class="button button--small" href="{{ section.url | relative_url }}">{{ section.title }}</a>
+                </li>
+            {%- endif -%}
+        {%- endfor -%}
+    </ul>
+{% endif %}

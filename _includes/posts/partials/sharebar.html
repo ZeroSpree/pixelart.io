@@ -1,0 +1,38 @@
+<ul class="flex flex--center">
+    <li>
+        <a target="_blank"
+            class="button button--icon js-sharer" 
+            data-service="Facebook"
+            href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}">
+            {%- include svg/fb.svg -%}
+            <span class="a11y">Share on Facebook</span>
+        </a>
+    </li>
+    <li>
+        <a target="_blank"
+            class="button button--icon js-sharer" 
+            data-service="Twitter"
+            href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url }}">
+            {%- include svg/tw.svg -%}
+            <span class="a11y">Share on Twitter</span>
+        </a>
+    </li>
+    <li>
+        <a target="_blank"
+            class="button button--icon js-sharer" 
+            data-service="Tumblr"
+            href="http://www.tumblr.com/share/link?url={{ page.url | absolute_url }}">
+           {%- include svg/tu.svg -%}
+            <span class="a11y">Share on Tumblr</span>
+        </a>
+    </li>
+    <li>
+        <a target="_blank"
+            class="button button--icon js-sharer" 
+            data-service="Pinterest"
+            href="http://pinterest.com/pin/create/button/?url={{ page.url | absolute_url }}">
+            {%- include svg/pi.svg -%}
+            <span class="a11y">Share on Pinterest</span>
+        </a>
+    </li>
+</ul>

@@ -1,0 +1,22 @@
+.article {
+
+  &__footer {
+    margin-top: 72px;
+    margin-bottom: 72px;
+    padding: 24px 0;
+    border: 1px solid #ccc;
+    border-left: 0;
+    border-right: 0;
+
+    @include mq(lg) {
+      margin-top: 96px;
+      margin-bottom: 96px;
+    }
+
+    @include mq(xl) {
+      border: 0;
+    }
+  }
+
+}
+

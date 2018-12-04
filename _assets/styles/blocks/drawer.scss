@@ -1,0 +1,58 @@
+.drawer--is-open {
+  .header {
+    background: $white;
+  }
+}
+
+.drawer {
+  background: $white;
+  opacity: 1;
+  position: fixed;
+  width: 100%;
+  top: 90px;
+  left: 0;
+  z-index: 100;
+  overflow: auto;
+  transition: all .3s;
+  border-top: 1px solid $blue-light;
+  border-bottom: 1px solid $blue-light;
+
+  &[aria-hidden="true"] {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  &__menu {
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+    }
+  }
+
+  a {
+    display: block;
+    color: $black;
+    font-family: 'Fredoka One';
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 4px 8px;
+    margin: 4px 8px;
+
+    &.is-active,
+    &:hover,
+    &:active,
+    &:focus {
+      color: $blue;
+    }
+  }
+
+}
+

@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+{%- assign post = page -%}
+{%- include posts/partials/variables.html -%}
+
+<article class="article {{ postIsNarrow }} {{ postClasses | normalize_whitespace }}">
+    <header class="page-header flex--center wrapper--narrow">
+        {%- include posts/partials/categories.html -%}
+
+        <h1 class="headline headline--large">{{ postTitle }}</h1>
+
+        {%- if postSubtitle -%}
+            <h2>{{ postSubtitle }}</h2>
+        {%- endif -%}
+
+        {%- include posts/partials/sharebar.html -%}
+    </header>
+
+    <section class="article__content">
+        {%- include posts/partials/splash.html -%}
+        <div class="wrapper--narrow">
+            {{ content }}
+        </div>
+    </section>
+
+    <footer class="article__footer bleed">
+        {%- include posts/partials/sharebar.html -%}
+    </footer>
+</article>
+
+<section>
+    {%- for section in site.sections -%}
+        {%- if section.unlisted != true and page.categories contains section.slug -%}
+            {%- capture sectionTitle -%}
+                {%- if section.displayTitle -%}
+                    {{ section.displayTitle | replace:'\n', ' ' }}
+                {%- else -%}
+                    Pixel Art {{ section.title }}
+                {%- endif -%}
+            {%- endcapture -%}
+
+            <h3 class="headline headline--section">{{ sectionTitle }}</h3>
+
+            <div class="row cards">
+                {%- assign counter = 0 -%}
+
+                {%- for post in site.categories[section.slug] -%}
+                    {%- if post != page and counter < 3 -%}
+                        {%- include posts/card.html -%}
+                        {%- assign counter = counter | plus:1 -%}
+                    {%- endif -%}
+                {%- endfor -%}
+            </div>
+
+            <div class="ta--c">
+                <a href="{{ section.url | relative_url }}" class="button button--arrow">
+                    More {{ sectionTitle }}
+                    {%- include svg/chevron-right.svg -%}
+                </a>
+            </div>
+        {%- endif -%}
+    {%- endfor -%}
+</section>

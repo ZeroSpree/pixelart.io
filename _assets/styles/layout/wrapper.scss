@@ -1,0 +1,40 @@
+@mixin wrapper() {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: $site-max-width;
+
+  @each $name, $size in $site-gutter {
+    @include mq($name) {
+        padding-left: $size;
+        padding-right: $size;
+    }
+  }
+}
+
+@mixin bleed() {
+  @each $name, $size in $site-gutter {
+    @include mq($name) {
+      @if ( $name == xl ) {
+        $size: 0;
+      }
+      margin-left: -$size;
+      margin-right: -$size;
+    }
+  }
+}
+
+.wrapper {
+  @include wrapper();
+}
+
+.bleed {
+  @include bleed();
+}
+
+.wrapper--narrow {
+  @include mq(md) {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}

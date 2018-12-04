@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" class="template--{{ page.layout }}" data-baseurl="{{ site.baseurl }}">
+
+    <head>
+        {%- include meta.html -%}
+
+        {%- if site.is_production -%}
+            <style>{%- include assets/main.css -%}</style>
+        {%- else -%}
+            <link rel="stylesheet" href="{{ "/assets/styles/main.css" | relative_url }}">
+        {%- endif -%}
+    </head>
+
+    <body>
+        {%- include header.html -%}
+
+        <main class="wrapper">
+            {{ content }}
+        </main>
+
+        {%- include footer.html -%}
+
+        {%- if site.is_production -%}
+            <script>{%- include assets/main.min.js -%}</script>
+        {%- else -%}
+             <script src="{{ "/assets/js/lib/zepto.min.js" | relative_url }}"></script>
+             <script src="{{ "/assets/js/lib/blazy.min.js" | relative_url }}"></script>
+             <script src="{{ "/assets/js/drawer.js" | relative_url }}"></script>
+             <script src="{{ "/assets/js/share.js" | relative_url }}"></script>
+             <script src="{{ "/assets/js/lazy-load.js" | relative_url }}"></script>
+             <script src="{{ "/assets/js/scroll-down.js" | relative_url }}"></script>
+        {%- endif -%}
+    </body>
+
+</html>

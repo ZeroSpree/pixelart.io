@@ -1,0 +1,69 @@
+{% extends "./base.html" %}
+
+{% block content %}
+{% raw %}
+
+<main id="app" class="wrapper" v-cloak>
+    <ul class="listing">
+        <li class="row listing__header listing__header--actions">
+            <div>
+                <a class="button" href="/editor">
+                    <img src="/svg/plus-white.svg" class="icon">
+                    New Article
+                </a>
+            </div>
+        </li>
+
+        <li class="row listing__header">
+            <span class="col-2 col-xl-1">Created</span>
+            <span class="col-5 col-xl-6">Title</span>
+            <span class="col-3">Sections</span>
+            <span class="col-2">Actions</span>
+        </li>
+
+        <li class="row listing__row" v-for="post in posts">
+            <div class="col-2 col-xl-1" :title="post.date | hms">
+                <img src="/svg/clock.svg" class="icon"> {{post.date | ymd}}
+            </div>
+
+            <div class="col-5 col-xl-6">
+                <a 
+                    class="listing__title"
+                    :href="'/editor#' + post.path"
+                    :data-title="post.path">
+                    <img src="/svg/edit.svg" class="icon"> {{ post.title }}
+                </a>
+            </div>
+
+            <ul class="col-3 listing__list">
+                <li v-for="category in post.categories">{{category}}</li>
+            </ul>
+
+            <div class="col-2">
+                <a v-if="!post.permalink"
+                    class="button" 
+                    target="_blank"
+                    :href="'http://localhost:4500'+$options.filters.tojekyllurl(post.path)">
+                    <img src="/svg/link-white.svg" class="icon"> Preview
+                </a>
+                <a v-else
+                    class="button" 
+                    target="_blank"
+                    :href="'http://localhost:4500/' + post.permalink">
+                    <img src="/svg/link-white.svg" class="icon"> Preview
+                </a>
+            </div>
+        </li>
+    </ul>
+
+    <a v-if="poststoload.length" target="_blank" href="javascript:;" class="button" @click="loadmore">
+        <img src="/svg/plus-white.svg" class="icon"> Load More
+    </a>
+</main>
+
+{% endraw %}
+{% endblock %}
+
+{% block scripts %}
+<script src="/js/home/index.js"></script>
+{% endblock %}

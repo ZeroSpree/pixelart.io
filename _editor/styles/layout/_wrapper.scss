@@ -1,0 +1,19 @@
+@mixin wrapper() {
+  background: #fff;
+  border-top: 1px solid $border-gray;
+  min-height: 100%;
+  margin-left: 200px;
+  margin-right: auto;
+  max-width: $site-max-width;
+
+  @each $name, $size in $site-gutter {
+    @include mq($name) {
+        padding-left: $size;
+        padding-right: $size;
+    }
+  }
+}
+
+.wrapper {
+  @include wrapper();
+}

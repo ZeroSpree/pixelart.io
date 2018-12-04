@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="page-header flex--space-evenly wrapper--narrow">
+    <ul class="flex flex--wrap flex--center">
+        {% assign sortedSections = site.sections | sort: "order" %}
+        {%- for section in sortedSections -%}
+            {%- if section.unlisted != true -%}
+                <li>
+                    <a href="{{ section.url | relative_url }}" class="button button--small">{{ section.title }}</a>
+                </li>
+            {%- endif -%}
+        {%- endfor -%}
+    </ul>
+
+    <h1 class="headline headline--large">Meet all the Pixel Art you ever wanted.</h1>
+
+    {%- include scroll-down.html -%}
+</div>
+
+<section id="content">
+    <div class="row cards">
+        {%- for post in site.posts -%}
+            {%- include posts/card.html categories="true" -%}
+        {%- endfor -%}
+    </div>
+</section>

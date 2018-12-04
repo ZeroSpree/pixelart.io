@@ -1,0 +1,38 @@
+.is-hidden {
+  @include is-hidden();
+}
+
+.is-visible {
+  @include is-visible();
+}
+
+.a11y {
+  @include a11y();
+}
+
+.ellipsis {
+  @include ellipsis();
+}
+
+/*
+ * Aspect ratio predefined helpers.
+ */
+.ar {
+  @include ar(16, 9);
+}
+
+/*
+ * Commonly used aspect ratio classes.
+ * @Usage: .ar .ar--2-1 .ar--md-2-1 .ar--xl-16-9
+ */
+
+@each $name, $size in $site-breakpoints {
+  @include mq($name) {
+      @include ar-create-class(1, 1, $name);
+      @include ar-create-class(2, 1, $name);
+      @include ar-create-class(3, 1, $name);
+      @include ar-create-class(3, 2, $name);
+      @include ar-create-class(4, 3, $name);
+      @include ar-create-class(16, 9, $name);
+  }
+}

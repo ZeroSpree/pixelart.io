@@ -1,0 +1,26 @@
+<!-- Actions -->
+<div class="ee__actions">
+    <button id="save">
+        <img src="/svg/save-white.svg" class="icon"> Save
+    </button>
+
+    <a 
+        v-if="editor.permalink && extra.slug"
+        target="_blank"
+        class="button button--warn" 
+        :href="'http://localhost:4500/' + editor.permalink">
+        <img src="/svg/link-dark.svg" class="icon"> Preview
+    </a>
+
+    <a 
+        v-else-if="extra.slug"
+        target="_blank"
+        class="button button--warn" 
+        :href="'http://localhost:4500'+$options.filters.{{actionFilter}}(extra.slug)">
+        <img src="/svg/link-dark.svg" class="icon"> Preview
+    </a>
+
+    <button id="delete-article" class="button--danger" v-if="extra.slug">
+        <img src="/svg/trash-2-white.svg" class="icon"> Delete
+    </button>
+</div>

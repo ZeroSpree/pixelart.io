@@ -1,0 +1,107 @@
+// Text input
+[type="text"] {
+  border: 0;
+  font: inherit;
+  line-height: 22px;
+  padding: 0;
+  outline: 0;
+
+  &:focus {
+    border-color: $black;
+  }
+
+  &[disabled] {
+    background: $gray;
+  }
+}
+
+// Richtext
+.field-richtext [contenteditable] {
+  font: 400 12px/1.6 'Open Sans', sans-serif;
+  width: 100%;
+  outline: 0;
+  cursor: text;
+
+  &:empty::before {
+    content: attr(placeholder);
+    @extend ::placeholder;
+  }
+
+  &.size--large {
+    font: 700 32px/1.6 'Lora', serif;
+
+    &:empty::before {
+      font: inherit;
+      font-style: italic;
+    }
+  }
+
+  &.size--medium {
+    font: 700 20px/1.6 'Lora', serif;
+
+    &:empty::before {
+      font: inherit;
+      font-style: italic;
+    }
+  }
+}
+
+// Select dropdown
+select {
+  border: 1px solid $border-gray;
+  line-height: 24px;
+  padding: 3px 5px;
+  outline: 0;
+  font: inherit;
+
+  &:focus {
+    border-color: $black;
+  }
+}
+
+.field-select__placeholder {
+  color: $gray-darker;
+}
+
+[type="datetime-local"] {
+  @extend select;
+  font-size: 11px;
+}
+
+// Checkbox
+.field-checkbox {
+  label {
+    cursor: pointer;
+    display: block;
+    margin: 8px 0;
+  }
+
+  &__title {
+    display: block;
+
+    &::before {
+      content: ' ';
+      margin-right: 8px;
+      display: inline-block;
+      vertical-align: top;
+      width: 14px;
+      height: 14px;
+      line-height: 14px;
+      text-align: center;
+      border: 1px solid $border-gray;
+      border-radius: 3px;
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+
+    &:checked ~ .field-checkbox__title::before {
+      content: '\2713';
+      background: $green;
+      border-color: $green;
+      color: #fff;
+    }
+  }
+}
+

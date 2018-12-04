@@ -1,0 +1,16 @@
+{%- if postSplashIsHidden != 'true' and post.splash.image -%}
+    <figure class="article__splash bleed">
+        {{ postSplashImg }}
+
+        {%- if postSplashCreditsText != empty -%}
+        <small class="article__splash-credits">
+            {%- if postSplashCreditsURL != empty -%}
+                Artwork: <a href="{{ postSplashCreditsURL }}" target="_blank">{{ postSplashCreditsText }}</a>
+            {%- else -%}
+                {{ postSplashCreditsText }}
+            {%- endif -%}
+        </small>
+        {%- endif -%}
+
+    </figure>
+{%- endif -%}

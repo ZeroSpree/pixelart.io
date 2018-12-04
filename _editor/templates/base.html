@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta name="robots" content="noindex">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>JeMS - The Jekyll CMS</title>
+
+        <link href="/styles/min/main.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Open+Sans:300,400,400i,600,600i,700,800" rel="stylesheet">
+
+        {% block styles %}{% endblock %}
+    </head>
+
+    <body>
+        <header>
+            <div class="row">
+                <div>
+                    <a href="/">JeMS Home</a>
+                </div>
+            </div>
+        </header>
+
+        <nav class="sidebar">
+            <div class="sidebar__header">
+                <a class="button button--full" href="javascript:;" id="publish">
+                    <img src="/svg/zap-white.svg" class="icon"> Publish site
+                </a>
+            </div>
+
+            <h3>Navigation</h3>
+
+            <ul class="sidebar__nav">
+                <li>
+                    <a href="/">View Articles</a>
+                </li>
+                <li>
+                    <a href="/sections">Manage Sections</a>
+                </li>
+            </ul>
+
+            <div class="sidebar__footer"></div>
+        </nav>
+
+        {% block content %}{% endblock %}
+        <script src="/js/lib/vue.js"></script>
+        <script src="/js/lib/jquery-3.3.1.min.js"></script>
+        <script src="/js/lib/jquery-ui.min.js"></script>
+
+        <script src="config.js"></script>
+        <script src="/js/publish.js"></script>
+        <script src="/js/utils.js"></script>
+        <script src="/js/vue.filters.js"></script>
+        <script src="/js/ui.js"></script>
+
+        {% block scripts %}{% endblock %}
+    </body>
+</html>

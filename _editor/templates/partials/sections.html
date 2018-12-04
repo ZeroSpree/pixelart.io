@@ -1,0 +1,14 @@
+<div class="ee__module" v-if="sections.length">
+    <h3>Categories</h3>
+
+    <ul>
+        <li v-for="section in sections">
+            <div class="field field-checkbox">
+                <label>
+                    <input type="checkbox" :value="section.path" v-model="section.active">
+                    {% raw %}<span class="field-checkbox__title">{{section.title}}</span>{% endraw %}
+                </label>
+            </div>
+        </li>
+    </ul>
+</div>

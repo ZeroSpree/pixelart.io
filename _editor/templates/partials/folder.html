@@ -1,0 +1,27 @@
+{% raw %}
+<div class="ee__module field field-select" data-name="folder" v-if="sections.length">
+    <h3>Folder</h3>
+
+    <select v-model="editor.permalink">
+        <option class="field-select__placeholder" value="">No folder</option>
+
+        <!-- new article -->
+        <template v-if="!extra.slug">
+            <option
+                :value="section.path" 
+                v-for="section in sections">
+                {{section.title}}
+            </option>
+        </template>
+
+        <!-- existing article -->
+        <template v-else>
+            <option 
+                :value="section.path + $options.filters.tojekyllurl(extra.slug) + '/'" 
+                v-for="section in sections">
+                {{section.title}}
+            </option>
+        </template>
+    </select>
+</div>
+{% endraw %}

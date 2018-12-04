@@ -1,0 +1,114 @@
+.article {
+  .page-header {
+    margin-bottom: 48px;
+  }
+
+  &__content {
+
+    a {
+      @extend .link;
+    }
+
+    strong {
+      font-family: 'Fredoka One';
+      font-weight: 400;
+    }
+
+    blockquote {
+      margin: 48px 0;
+      padding-left: 16px;
+      border-left: 6px solid $blue;
+      font: 400 18px/1.5 'Fredoka One', sans-serif;
+    }
+
+    img {
+      min-height: 1px;
+      @include pixelated;
+      width: 100%;
+      max-height: calc(100vh - 180px);
+      display: block;
+      object-fit: contain;
+    }
+
+    p {
+      margin-bottom: 16px;
+
+      + p {
+        margin-top: 32px;
+      }
+
+      + figure {
+        margin-top: 0;
+      }
+    }
+
+    figure {
+      margin-top: 48px;
+      margin-bottom: 48px;
+      background: $bg-placeholder;
+
+      + figure {
+        margin-top: 48px;
+      }
+    }
+
+    @include mq(md) {
+      font-size: 20px;
+
+      blockquote {
+        margin: 96px 0;
+        padding-left: 48px;
+        border-left-width: 12px;
+        font-size: 24px;
+      }
+
+      p {
+        margin-bottom: 16px;
+  
+        + p {
+          margin-top: 64px;
+        }
+
+        + figure {
+          margin-top: 0;
+        }
+      }
+
+      figure {
+        margin-top: 96px;
+        margin-bottom: 96px;
+
+        + figure {
+          margin-top: 96px;
+        }
+      }
+    }
+
+  }
+
+  &.is-narrow {
+    figure {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    img {
+      max-width: 225px;
+      margin: 0 auto;
+    }
+  }
+
+  &.is-medium {
+    figure {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    img {
+      max-width: 450px;
+      margin: 0 auto;
+    }
+  }
+
+}
+

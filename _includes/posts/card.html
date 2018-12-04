@@ -1,0 +1,12 @@
+{%- include posts/partials/variables.html -%}
+
+<article class="card {{ include.sizes | default: 'col-12 col-md-6 col-lg-4' }}">
+    <a href="{{ postURL }}" class="card__anchor">
+        <div class="ar ar--1-1 {{ postSplashContain }}" {{ postSplashBgLazy }}></div>
+        <h3 class="card__title">{{ postTitle }}</h3>
+    </a>
+
+    {%- if include.categories -%}
+        {% include posts/partials/categories.html %}
+    {%- endif -%}
+</article>
