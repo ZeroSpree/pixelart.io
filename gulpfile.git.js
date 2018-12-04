@@ -35,7 +35,7 @@ module.exports = function() {
             'git:add', 
             'git:commit', 
             'git:push', 
-            'default');
+            'build:local');
     });
 
 }
