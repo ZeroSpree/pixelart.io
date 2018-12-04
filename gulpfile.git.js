@@ -34,8 +34,7 @@ module.exports = function() {
             'build', 
             'git:add', 
             'git:commit', 
-            'git:push', 
-            'build:local');
+            'git:push');
     });
 
 }
