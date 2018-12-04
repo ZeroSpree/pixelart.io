@@ -6,6 +6,7 @@ name: pixelart.io # for og:site_name
 title: For your Pixel Art inspiration needs # default meta title
 description: Plenty of Pixel Art animations, characters, games and more! # default meta description
 image: false
+ga: "UA-75349601-1" # Google Analytics
 google_site_verification: false # optional, Google Search Console verification
 twitter_site: false # optional, for twitter cards - Twitter site account, without the @
 twitter_creator: false # optional, for twitter cards - Twitter author account, without the @
