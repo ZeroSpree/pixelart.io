@@ -18,7 +18,7 @@ module.exports = function() {
     });
 
     gulp.task('git:commit', function(callback) {
-        return gulp.src('.').pipe(git.commit('JekyllCMS Publish'));
+        return gulp.src('.').pipe(git.commit('Automatic Deploy'));
         callback();
     });
 
