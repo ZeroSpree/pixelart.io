@@ -1,32 +1,42 @@
-var gulp        = require('gulp');
-var git         = require('gulp-git');
+var gulp = require('gulp');
+var argv = require('yargs').argv;
+var git = require('gulp-git');
 var runSequence = require('run-sequence');
-var notify      = require('gulp-notify');
 
 module.exports = function() {
 
-    gulp.task('git:pull', function() {
-        git.pull('origin', 'master', function(err) {
-            if (err)
-                throw err;
+    gulp.task('git:pull', function(callback){
+      git.pull('origin', 'master', function (err) {
+        if (err) throw err;
+
+        callback();
+      });
+    });
+
+    gulp.task('git:add', function(callback) {
+        return gulp.src('.').pipe(git.add());
+        callback();
+    });
+
+    gulp.task('git:commit', function(callback) {
+        return gulp.src('.').pipe(git.commit('JekyllCMS Publish'));
+        callback();
+    });
+
+    gulp.task('git:push', function(callback){
+        git.push('origin', 'master', function (err) {
+            if (err) throw err;
+            callback();
         });
     });
 
-    gulp.task('git:all', function() {
-        return gulp
-            .src('.')
-            .pipe( git.add() )
-            .pipe(notify({ message: 'Ran git.add()' }))
-            .pipe( git.commit('JekyllCMS Publish') )
-            .pipe(notify({ message: 'Ran git.commit()' }))
-            .pipe( git.push('origin', 'master', function(err) {
-                if (err) throw err;
-            }) )
-            .pipe(notify({ message: 'Ran git.push()' }));
-    });
-
     gulp.task('git:publish', function() {
-        runSequence('build', 'git:all', 'rebuild');
+        runSequence(
+            'build', 
+            'git:add', 
+            'git:commit', 
+            'git:push', 
+            'rebuild');
     });
 
 }

@@ -16,6 +16,7 @@ future: true
 
 exclude: ["_assets",
           "node_modules", 
+          "CNAME",
           "Gemfile",
           "Gemfile.lock",
           "README.md",
