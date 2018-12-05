@@ -27,10 +27,7 @@
     }
 })();
 
-/*
 var bLazy = new Blazy({
     selector: '[data-src]',
     offset: 400
 });
-
-*/
