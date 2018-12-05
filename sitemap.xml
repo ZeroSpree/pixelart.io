@@ -1,0 +1,30 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    {% for page in site.sections %}
+        {% if page.layout == "section" %}
+        <url>
+            <loc>{{ page.url | absolute_url }}</loc>
+            <changefreq>daily</changefreq>
+        </url>
+        {% endif %}
+    {% endfor %}
+    {% for post in site.posts %}
+        <url>
+            <loc>{{ post.url | absolute_url }}</loc>
+            <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+            <changefreq>weekly</changefreq>
+            {% if post.splash.image %}
+                <image:image>
+                   <image:loc>{{ post.splash.image | absolute_url }}</image:loc>
+                   <image:caption>{{ post.title }}</image:caption>
+                </image:image>
+            {% endif %}
+        </url>
+    {% endfor %}
+</urlset>
