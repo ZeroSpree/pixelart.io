@@ -63,6 +63,21 @@ utils.yamlSanitize = function(obj) {
 
 
 utils.htmlSanitize = function (content) {
+    function getImageDimension(el, onReady) {
+        var src = typeof el.attr === 'function' ? el.attr('src') : el.src !== undefined ? el.src : el;
+
+        var image = new Image();
+        image.onload = function(){
+            if(typeof(onReady) == 'function') {
+                onReady({
+                    width: image.width,
+                    height: image.height
+                });
+            }
+        };
+        image.src = src;
+    }
+
     $('<div id="htmlSanitize">'+ content +'</div>').appendTo('body');
 
     var $ct = $('#htmlSanitize');
@@ -73,16 +88,21 @@ utils.htmlSanitize = function (content) {
 
     // lazy load images
     var $images = $ct.find('img');
+    var counter = 0;
+
     $.each($images, function () {
         var $t = $(this),
-            src = $t.attr('src');
+            src = $t.attr('src'),
+            width = $t.attr('width') || $('body').find('img[src="'+ src +'"]').width(),
+            height = $t.attr('height') || $('body').find('img[src="'+ src +'"]').height();
 
-        $t.attr('data-src', src);
-        $t.removeAttr('src');
+        $t.attr({
+            'data-src': src,
+            src: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="'+ width +'" height="'+ height +'"></svg>'
+        });
     });
 
     var $content = $.trim( $ct.html() );
-
     $ct.remove();
 
     return $content;

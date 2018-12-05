@@ -1269,3 +1269,7 @@ header {
 #editor-body figure {
   margin: 20px 0;
 }
+/* line 75, _editor/styles/ee/_quill.scss */
+#editor-body img {
+  height: auto;
+}

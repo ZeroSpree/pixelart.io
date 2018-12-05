@@ -25,6 +25,15 @@ var _Fields = [
     label: 'Use Medium Images'
 },
 
+// Twitter author handle
+{
+    name: 'twitterHandle',
+    type: 'text',
+    placement: 'right',
+    title: 'Twitter author handle',
+    placeholder: 'EG: pixelartio'
+},
+
 // Meta title
 {
     name: 'metaTitle',

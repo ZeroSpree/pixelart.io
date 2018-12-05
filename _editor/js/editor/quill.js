@@ -10,8 +10,8 @@ $('body').on('click', '#ql-readmore', function() {
 });
 
 // Insert Image (triggered from upload.js)
-function quillImageInsert(filepath) {
-    quill.insertEmbed(getIndex(), 'figure', filepath); // custom blot
+function quillImageInsert(data) {
+    quill.insertEmbed(getIndex(), 'figure', data); // custom blot
     quill.insertText(getIndex() + 1, '\n', Quill.sources.USER);
     quill.setSelection(getIndex() + 2, Quill.sources.SILENT);
 }

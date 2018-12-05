@@ -1,6 +1,7 @@
 ---
 splash:
   image: /uploads/2018-11-25/pixelart_1543156930901.gif
+twitterHandle: IvanRDixon
 layout: post
 categories:
   - animation

@@ -1,3 +1,24 @@
+{% comment %}
+Add 'via @sitehandle'
+{% endcomment %}
+{%- capture twitter_site -%}
+    {% if site.twitter_site %}&via={{ site.twitter_site }}{%- endif -%}
+{%- endcapture -%}
+
+{% comment %}
+Add #twitter #hashtags
+{% endcomment %}
+{%- capture twitterTags -%}
+    {% if site.twitter_tags %}&hashtags={{ site.twitter_tags }}{%- endif -%}
+{%- endcapture -%}
+
+{% comment %}
+Add @author link
+{% endcomment %}
+{%- capture twitterHandle -%}
+    {% if page.twitterHandle %} @{{ page.twitterHandle }}{%- endif -%}
+{%- endcapture -%}
+
 <ul class="flex flex--center">
     <li>
         <a target="_blank"
@@ -12,7 +33,7 @@
         <a target="_blank"
             class="button button--icon js-sharer" 
             data-service="Twitter"
-            href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url }}">
+            href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}{{ twitterHandle }}&url={{ page.url | absolute_url }}{{ twitter_site }}{{ twitterTags }}">
             {%- include svg/tw.svg -%}
             <span class="a11y">Share on Twitter</span>
         </a>

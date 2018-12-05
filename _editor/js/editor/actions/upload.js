@@ -1,3 +1,18 @@
+function getImageDimension(filepath, onReady) {
+    var src = filepath;
+
+    var image = new Image();
+    image.onload = function(){
+        if(typeof(onReady) == 'function') {
+            onReady({
+                width: image.width,
+                height: image.height
+            });
+        }
+    };
+    image.src = src;
+}
+
 function uploadSuccess(filepath, obj, key) {
     // obj & key are needed for yaml data, like splash image.
     if (obj && key) {
@@ -5,10 +20,16 @@ function uploadSuccess(filepath, obj, key) {
     }
     // insert into editor
     else {
-        quillImageInsert(filepath);
-    }
+        getImageDimension(filepath, function (sizes) {
+            quillImageInsert({
+                src: filepath,
+                width: sizes.width,
+                height: sizes.height
+            });
 
-    UI.notify('Image uploaded succesfully!');
+            UI.notify('Image uploaded succesfully!');
+        });
+    }
 }
 
 function uploadError(res) {

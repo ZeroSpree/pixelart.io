@@ -25,9 +25,16 @@
       min-height: 1px;
       @include pixelated;
       width: 100%;
+      height: auto;
       max-height: calc(100vh - 180px);
       display: block;
       object-fit: contain;
+      opacity: 1;
+      transition: opacity .3s;
+
+      &[data-src] {
+        opacity: 0;
+      }
     }
 
     p {

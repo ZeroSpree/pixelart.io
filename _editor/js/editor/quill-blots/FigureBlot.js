@@ -1,9 +1,9 @@
 let BlockEmbed = Quill.import('blots/block/embed');
 
 class FigureBlot extends BlockEmbed {
-    static create(value) {
+    static create(data) {
         let node = super.create();
-        node.innerHTML = '<img src="'+ value +'" />';
+        node.innerHTML = '<img src="'+ data.src +'" width="'+ data.width +'" height="'+ data.height +'" />';
         node.setAttribute('contenteditable', false);
         return node;
     }
