@@ -1,6 +1,6 @@
 is_production: true
 baseurl: "/"
-url: "http://pixelart.io"
+url: "https://pixelart.io"
 
 name: pixelart.io # for og:site_name
 title: For your Pixel Art inspiration needs # default meta title
