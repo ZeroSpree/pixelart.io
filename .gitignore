@@ -1,5 +1,6 @@
 _site
-assets
+assets/js
+assets/styles
 .sass-cache
 .jekyll-metadata
 .DS_Store
