@@ -5,12 +5,13 @@ url: "https://pixelart.io"
 name: pixelart.io # for og:site_name
 title: For your Pixel Art inspiration needs # default meta title
 description: Find incredible Pixel Art characters, animations, games, assets and more! # default meta description
-image: false
+image: false # social share image
+
 ga: "UA-75349601-1" # Google Analytics
-google_site_verification: false # optional, Google Search Console verification
+google_site_verification: YmVoqteYV2uUrrnR8rBjmbwP40Ytfza3ar95opJSUj4 # optional, Google Search Console verification
+
 twitter_site: pixelartio # optional, for twitter cards - Twitter site account, without the @
-twitter_creator: false # optional, for twitter cards - Twitter author account, without the @
-twitter_tags: pixelart,test
+twitter_tags: pixelart # comma,separated,list
 
 markdown: kramdown
 permalink: /:title/

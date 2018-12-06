@@ -1,7 +1,6 @@
 {%- assign META_URL = page.url | replace:'index.html','' | absolute_url -%}
 {%- assign GOOGLE_SITE_VERIFICATION = site.google_site_verification -%}
 {%- assign TWITTER_SITE = site.twitter_site -%}
-{%- assign TWITTER_CREATOR = site.twitter_creator -%}
 {%- assign SITE_NAME = site.name -%}
 
 {%- capture OG_TYPE -%}
@@ -65,7 +64,6 @@
     <meta name="twitter:url" content="{{ META_URL }}">
     {% if OG_IMAGE != 'false' %}<meta name="twitter:image" content="{{ OG_IMAGE }}">{% endif %}
     {% if TWITTER_SITE %}<meta name="twitter:site" content="@{{ TWITTER_SITE }}">{% endif %}
-    {% if TWITTER_CREATOR %}<meta name="twitter:creator" content="@{{ TWITTER_CREATOR }}">{% endif %}
 
     {% if GOOGLE_SITE_VERIFICATION %}<meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}" />{% endif %}
 
