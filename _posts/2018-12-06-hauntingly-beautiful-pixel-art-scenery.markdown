@@ -1,0 +1,12 @@
+---
+splash:
+  image: /uploads/2018-12-06/pixelart_1544121417172.png
+  ishidden: true
+layout: post
+categories:
+  - scenery
+date: '2018-12-06T20:14:50'
+title: 'Beautiful Pixel Art Scenery'
+
+---
+<p>Gorgeous collection of scenery by various artists found on DeviantArt.</p><p><strong>Boat</strong> by <a href="https://www.deviantart.com/dixay59" target="_blank">Bruno</a></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;960&quot; height=&quot;636&quot;&gt;&lt;/svg&gt;" width="960" height="636" data-src="/uploads/2018-12-06/pixelart_1544120483951.png"></figure><p><strong>Pixel Landscape </strong>by <a href="https://www.deviantart.com/pacifiedclaire/" target="_blank">PacifiedClaire</a></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;894&quot; height=&quot;894&quot;&gt;&lt;/svg&gt;" width="894" height="894" data-src="/uploads/2018-12-06/pixelart_1544120717330.png"></figure><p><strong>Ballooning</strong> by <a href="https://www.deviantart.com/lennartverhoeff" target="_blank">LennartVerhoeff</a></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;750&quot; height=&quot;1065&quot;&gt;&lt;/svg&gt;" width="750" height="1065" data-src="/uploads/2018-12-06/pixelart_1544120876749.jpg"></figure><p><strong>Sunset</strong> by <a href="https://www.deviantart.com/coffeto" target="_blank">Paul</a></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;261&quot; height=&quot;395&quot;&gt;&lt;/svg&gt;" width="261" height="395" data-src="/uploads/2018-12-06/pixelart_1544121055592.png"></figure><p><strong>Sunshine Canyon</strong> by <a href="https://www.deviantart.com/happeter" target="_blank">Happeter</a></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;1024&quot; height=&quot;576&quot;&gt;&lt;/svg&gt;" width="1024" height="576" data-src="/uploads/2018-12-06/pixelart_1544121153794.jpg"></figure>
