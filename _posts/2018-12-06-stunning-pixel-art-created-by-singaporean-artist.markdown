@@ -1,0 +1,14 @@
+---
+splash:
+  image: /uploads/2018-12-06/pixelart_1544125261075.png
+  credits: 'Kenze Wee Hon Ming'
+  creditsurl: 'https://www.behance.net/KenzeWeeHonMing'
+  ishidden: true
+layout: post
+categories:
+  - scenery
+date: '2018-12-06T21:39:59'
+title: 'Stunning Pixel Art created by Singaporean artist'
+
+---
+<p><strong>Kenze Wee Hon Ming</strong> 's beautiful, cyberpunk inspired Pixel Art. </p><p>Check out more of his work on <a href="https://www.behance.net/KenzeWeeHonMing" target="_blank">Behance</a> and follow him on <a href="https://www.instagram.com/emperor_wee/" target="_blank">Instagram</a></p><p><strong>Ramen</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;900&quot; height=&quot;1200&quot;&gt;&lt;/svg&gt;" width="900" height="1200" data-src="/uploads/2018-12-06/pixelart_1544126041341.png"></figure><p><strong>Sentinel</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;1500&quot; height=&quot;2000&quot;&gt;&lt;/svg&gt;" width="1500" height="2000" data-src="/uploads/2018-12-06/pixelart_1544126111917.png"></figure><p><strong>Corporations</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;1200&quot; height=&quot;1600&quot;&gt;&lt;/svg&gt;" width="1200" height="1600" data-src="/uploads/2018-12-06/pixelart_1544126142800.png"></figure><p><strong>Waiting</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;1000&quot; height=&quot;738&quot;&gt;&lt;/svg&gt;" width="1000" height="738" data-src="/uploads/2018-12-06/pixelart_1544126255940.png"></figure><p><strong>A future you deserve</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;2800&quot; height=&quot;3746&quot;&gt;&lt;/svg&gt;" width="2800" height="3746" data-src="/uploads/2018-12-06/pixelart_1544126349514.png"></figure><p><strong>Pilgrimage</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;1200&quot; height=&quot;1468&quot;&gt;&lt;/svg&gt;" width="1200" height="1468" data-src="/uploads/2018-12-06/pixelart_1544126412780.png"></figure>
