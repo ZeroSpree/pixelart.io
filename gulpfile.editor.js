@@ -6,6 +6,7 @@ var sass         = require('gulp-ruby-sass');
 var postcss      = require('gulp-postcss');
 var cleancss     = require('gulp-clean-css');
 var autoprefixer = require('autoprefixer');
+var os           = require('os')
 
 module.exports = function() {
 
@@ -44,10 +45,14 @@ module.exports = function() {
     /*
      * Open Editor
      */
+    var browser = os.platform() === 'linux' ? 'google-chrome' : (
+      os.platform() === 'darwin' ? 'google chrome' : (
+      os.platform() === 'win32' ? 'chrome' : 'firefox'));
+
     gulp.task('ee:build:open', function() {
         gulp.src('./').pipe(open({
             uri : 'http://localhost:3000',
-            app : 'chrome'
+            app : browser
         }));
     });
 
