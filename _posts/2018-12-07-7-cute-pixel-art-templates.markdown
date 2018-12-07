@@ -1,0 +1,16 @@
+---
+splash:
+  image: /uploads/2018-12-07/pixelart_1544193514901.jpg
+  creditsurl: 'https://www.deviantart.com/hama-girl/'
+  credits: Hama-Girl
+  ishidden: true
+disablePixelatedRendering: true
+layout: post
+categories:
+  - character
+  - grid
+date: '2018-12-07T16:35:32'
+title: '7 Cute Pixel Art Templates'
+
+---
+<p>Check out the artist on <a href="https://www.deviantart.com/hama-girl/" target="_blank">DeviantArt</a> for more.</p><p><strong>Fast Food</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;327&quot; height=&quot;250&quot;&gt;&lt;/svg&gt;" width="327" height="250" data-src="/uploads/2018-12-07/pixelart_1544193792697.jpg"></figure><p><strong>Narwhal</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;210&quot; height=&quot;250&quot;&gt;&lt;/svg&gt;" width="210" height="250" data-src="/uploads/2018-12-07/pixelart_1544193811921.jpg"></figure><p><strong>Nyan Cat</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;326&quot; height=&quot;250&quot;&gt;&lt;/svg&gt;" width="326" height="250" data-src="/uploads/2018-12-07/pixelart_1544193839217.jpg"></figure><p><strong>Psy - Gangnam Style</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;312&quot; height=&quot;250&quot;&gt;&lt;/svg&gt;" width="312" height="250" data-src="/uploads/2018-12-07/pixelart_1544193865322.png"></figure><p><strong>Mario</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;202&quot; height=&quot;250&quot;&gt;&lt;/svg&gt;" width="202" height="250" data-src="/uploads/2018-12-07/pixelart_1544193891895.jpg"></figure><p><strong>Peach, Mario, Luigi &amp; Toad</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;500&quot; height=&quot;235&quot;&gt;&lt;/svg&gt;" width="500" height="235" data-src="/uploads/2018-12-07/pixelart_1544193929290.jpg"></figure><p><strong>Elf </strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;171&quot; height=&quot;250&quot;&gt;&lt;/svg&gt;" width="171" height="250" data-src="/uploads/2018-12-07/pixelart_1544193946361.jpg"></figure><p><strong><span class="ql-cursor">﻿</span></strong></p>
