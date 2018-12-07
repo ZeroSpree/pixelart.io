@@ -4,7 +4,5 @@
         placeholder="{{titlePlaceholder}}" 
         class="size--large"
         v-html="editor.title"
-        @blur="textTrim" 
-        @keydown="headlineSlugHandler" 
-        @keyup="headlineSlugHandler"></div>
+        @blur="headlineHandler"></div>
 </div>

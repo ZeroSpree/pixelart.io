@@ -1,5 +1,6 @@
 var _Fields = [
 // Subheadline
+/*
 {
     name: 'subtitle',
     type: 'richtext',
@@ -8,7 +9,7 @@ var _Fields = [
     event: '@blur="htmlTrim"',
     placeholder: 'Add a Subheadline...'
 },
-
+*/
 // Image size settings
 {
     name: 'disablePixelatedRendering',

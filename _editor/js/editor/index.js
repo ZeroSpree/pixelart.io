@@ -81,6 +81,19 @@ var vm = new Vue({
             if ( !data.extra.isCustomSlug ) {
                 data.extra.permalink = utils.sanitizeSlug( $('[data-name="title"]').text() );
             }
+        },
+        headlineHandler : function (event) {
+            var data = this._data,
+                $t   = $(event.target),
+                key  = $t.parents('[data-name]').first().attr('data-name'),
+                trimmedText = $t.text().trim();
+
+            $t.html(trimmedText);
+            this._data.editor[key] = trimmedText;
+
+            if ( !data.extra.isCustomSlug ) {
+                data.extra.permalink = utils.sanitizeSlug( trimmedText );
+            }
         }
     }
 });
