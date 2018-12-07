@@ -6,6 +6,7 @@ name: pixelart.io # for og:site_name
 title: For your Pixel Art inspiration needs # default meta title
 description: Find incredible Pixel Art characters, animations, games, assets and more! # default meta description
 image: false # social share image
+theme_color: '#2962cd'
 
 ga: "UA-75349601-1" # Google Analytics
 google_site_verification: YmVoqteYV2uUrrnR8rBjmbwP40Ytfza3ar95opJSUj4 # optional, Google Search Console verification

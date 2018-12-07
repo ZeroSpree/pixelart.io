@@ -1,7 +1,4 @@
 {%- assign META_URL = page.url | replace:'index.html','' | absolute_url -%}
-{%- assign GOOGLE_SITE_VERIFICATION = site.google_site_verification -%}
-{%- assign TWITTER_SITE = site.twitter_site -%}
-{%- assign SITE_NAME = site.name -%}
 
 {%- capture OG_TYPE -%}
     {%- if page.layout == 'post' -%}
@@ -11,7 +8,7 @@
     {%- endif -%}
 {%- endcapture -%}
 
-{%- capture OG_IMAGE %}
+{%- capture OG_IMAGE -%}
     {%- if page.splash.image -%}
         {{ page.splash.image | absolute_url }}
     {%- elsif site.image -%}
@@ -21,7 +18,7 @@
     {%- endif -%}
 {%- endcapture -%}
 
-{%- capture META_TITLE %}
+{%- capture META_TITLE -%}
     {%- if page.metaTitle -%}
         {{ page.metaTitle }}
     {%- elsif page.title -%}
@@ -37,7 +34,7 @@
         {{ page.metaDescription }}
     {%- elsif page.excerpt -%}
         {{ page.excerpt }}
-    {%- else %}
+    {%- else -%}
         {{ site.description }}
     {%- endif -%}
 {%- endcapture -%}
@@ -48,6 +45,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0">
 
+    {%- if site.theme_color -%}
+    <meta name="theme-color" content="{{ site.theme_color }}">
+    <meta name="msapplication-navbutton-color" content="{{ site.theme_color }}">
+    <meta name="apple-mobile-web-app-status-bar-style" content="{{ site.theme_color }}">
+    {%- endif -%}
+
     <title>{{ META_TITLE }}</title>
     <meta name="description" content="{{ META_DESCRIPTION }}">
 
@@ -55,17 +58,30 @@
     <meta property="og:title" content="{{ META_TITLE }}">
     <meta property="og:description" content="{{ META_DESCRIPTION }}">
     <meta property="og:url" content="{{ META_URL }}">
-    {% if OG_IMAGE != 'false' %}<meta property="og:image" content="{{ OG_IMAGE }}">{% endif %}
-    {% if SITE_NAME %}<meta property="og:site_name" content="{{ SITE_NAME }}">{% endif %}
+
+    {%- if OG_IMAGE != 'false' -%}
+    <meta property="og:image" content="{{ OG_IMAGE }}">
+    {%- endif -%}
+
+    {%- if site.name -%}
+    <meta property="og:site_name" content="{{ site.name }}">
+    {%- endif -%}
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ META_TITLE }}">
     <meta name="twitter:description" content="{{ META_DESCRIPTION }}">
     <meta name="twitter:url" content="{{ META_URL }}">
-    {% if OG_IMAGE != 'false' %}<meta name="twitter:image" content="{{ OG_IMAGE }}">{% endif %}
-    {% if TWITTER_SITE %}<meta name="twitter:site" content="@{{ TWITTER_SITE }}">{% endif %}
+    {%- if OG_IMAGE != 'false' -%}
+    <meta name="twitter:image" content="{{ OG_IMAGE }}">
+    {%- endif -%}
 
-    {% if GOOGLE_SITE_VERIFICATION %}<meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}" />{% endif %}
+    {%- if site.twitter_site -%}
+    <meta name="twitter:site" content="@{{ site.twitter_site }}">
+    {%- endif -%}
+
+    {%- if site.google_site_verification -%}
+    <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
+    {%- endif -%}
 
     <link rel="canonical" href="{{ META_URL }}">
     <link rel="shortcut icon" href="{{ "favicon.ico" | absolute_url }}" />
