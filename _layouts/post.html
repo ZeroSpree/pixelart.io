@@ -5,7 +5,7 @@ layout: default
 {%- assign post = page -%}
 {%- include posts/partials/variables.html -%}
 
-<article class="article {{ postIsNarrow }} {{ postClasses | normalize_whitespace }}">
+<article class="article {{ postIsNarrow }} {{ postIsMedium }} {{ postClasses | normalize_whitespace }}">
     <header class="page-header flex--center wrapper--narrow">
         {%- include posts/partials/categories.html -%}
 
