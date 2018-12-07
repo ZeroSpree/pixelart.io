@@ -86,6 +86,15 @@ $(function() {
         if (!isOpen) {
             $button.focus();
         }
+
+        if( window.ga ) {
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'Hamburger',
+                eventAction: isOpen ? 'Open Hamburger' : 'Close Hamburger',
+                eventLabel: 'Clicked Hamburger on ' + window.location.href
+            });
+        }
     }
 
     $('.js--drawer-toggle').on('click', toggleMenu);

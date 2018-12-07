@@ -50,7 +50,10 @@
                                     {%- endcapture -%}
 
                                     <li>
-                                        <a class="{{ activeSubsection }}" href="{{ subsection.url | relative_url }}" {{ activeSubsection }}>{{ subsection.title }}</a>
+                                        <a 
+                                            class="{{ activeSubsection }}" 
+                                            href="{{ subsection.url | relative_url }}" 
+                                            {{ activeSubsection }}>{{ subsection.title }}</a>
                                     </li>
                                 {%- endif -%}
                             {%- endfor -%}
@@ -58,11 +61,17 @@
 
                         <li>
                             {%- if subsections == empty -%}
-                                <a class="{{ activeSection }}" href="{{ section.url | relative_url }}" {{ activeSection }}>{{ section.title }}</a>
+                                <a 
+                                    class="{{ activeSection }}" 
+                                    href="{{ section.url | relative_url }}" 
+                                    {{ activeSection }}>{{ section.title }}</a>
                             {%- else -%}
                                 <ul>
                                     <li>
-                                        <a class="{{ activeSection }}" href="{{ section.url | relative_url }}" {{ activeSection }}>{{ section.title }}</a>
+                                        <a 
+                                            class="{{ activeSection }}" 
+                                            href="{{ section.url | relative_url }}" 
+                                            {{ activeSection }}>{{ section.title }}</a>
                                     </li>
                                     {{ subsections }}
                                 </ul>

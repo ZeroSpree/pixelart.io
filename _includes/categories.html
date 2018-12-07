@@ -1,7 +1,0 @@
-{%- for section in site.sections -%}
-    {%- if section.unlisted != true -%}
-        <li>
-            <a href="{{ section.url | relative_url }}">{{ section.title }}</a>
-        </li>
-    {%- endif -%}
-{%- endfor -%}
