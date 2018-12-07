@@ -49,9 +49,12 @@
 {%- comment -%}
 @var: postClasses
 @type: String
-@returns: Post sections as classnames: 'is--character is--scenery'
+@returns: Post sections as classnames: 'is--character is--scenery is--disablePixelatedRendering'
 {%- endcomment -%}
 {%- capture postClasses -%}
+    {% if post.disablePixelatedRendering %}
+        is--disablePixelatedRendering
+    {% endif %}
     {% for category in post.categories %}
         is--{{category}}
     {% endfor %}

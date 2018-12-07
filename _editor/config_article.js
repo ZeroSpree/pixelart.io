@@ -11,10 +11,18 @@ var _Fields = [
 
 // Image size settings
 {
-    name: 'isnarrow',
+    name: 'disablePixelatedRendering',
     type: 'checkbox',
     placement: 'right',
     title: 'Image Settings',
+    label: 'Disable Pixelated Rendering'
+},
+
+// Image size settings
+{
+    name: 'isnarrow',
+    type: 'checkbox',
+    placement: 'right',
     label: 'Use Narrow Images'
 },
 

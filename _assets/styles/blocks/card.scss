@@ -6,6 +6,10 @@
   margin-top: 32px;
 }
 
+.card:not(.is--disablePixelatedRendering) .ar {
+    @include pixelated;
+}
+
 .card {
   margin-bottom: 48px;
 
@@ -14,7 +18,6 @@
     position: relative;
     top: 0;
     transition: top .15s linear;
-    @include pixelated;
 
     &.is-contain {
       background-size: contain;
