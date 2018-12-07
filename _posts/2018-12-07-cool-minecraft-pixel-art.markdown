@@ -1,0 +1,16 @@
+---
+splash:
+  image: /uploads/2018-12-07/pixelart_1544187801450.jpg
+  ishidden: true
+disablePixelatedRendering: true
+ismedium: true
+layout: post
+categories:
+  - character
+  - game
+  - minecraft
+date: '2018-12-07T14:58:52'
+title: 'Cool Minecraft Pixel Art'
+
+---
+<p>Check out the artist on <a href="https://www.deviantart.com/dragondud" target="_blank">DeviantArt</a></p><p><strong>Minecraft Rose</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;472&quot; height=&quot;250&quot;&gt;&lt;/svg&gt;" width="472" height="250" data-src="/uploads/2018-12-07/pixelart_1544187967845.jpg"></figure><p><strong>Minecraft Cake Slice</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;472&quot; height=&quot;250&quot;&gt;&lt;/svg&gt;" width="472" height="250" data-src="/uploads/2018-12-07/pixelart_1544187988475.jpg"></figure><p><strong>Link Hearts</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;333&quot; height=&quot;250&quot;&gt;&lt;/svg&gt;" width="333" height="250" data-src="/uploads/2018-12-07/pixelart_1544188049889.jpg"></figure><p><strong>8 Bit Mickey</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;333&quot; height=&quot;250&quot;&gt;&lt;/svg&gt;" width="333" height="250" data-src="/uploads/2018-12-07/pixelart_1544188087501.jpg"></figure><p><strong>White Mage</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;333&quot; height=&quot;250&quot;&gt;&lt;/svg&gt;" width="333" height="250" data-src="/uploads/2018-12-07/pixelart_1544188124602.jpg"></figure><p><strong>Mega Man</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;333&quot; height=&quot;250&quot;&gt;&lt;/svg&gt;" width="333" height="250" data-src="/uploads/2018-12-07/pixelart_1544188146484.jpg"></figure><p><strong>Mario Mushroom</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;333&quot; height=&quot;250&quot;&gt;&lt;/svg&gt;" width="333" height="250" data-src="/uploads/2018-12-07/pixelart_1544188186964.jpg"></figure><p><strong>Mario </strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;333&quot; height=&quot;250&quot;&gt;&lt;/svg&gt;" width="333" height="250" data-src="/uploads/2018-12-07/pixelart_1544188205578.jpg"></figure><p><strong><span class="ql-cursor">﻿﻿</span></strong></p>
