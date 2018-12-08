@@ -5,6 +5,7 @@ splash:
   creditsurl: 'https://www.deviantart.com/jasmine-kao'
   ishidden: true
   contain: true
+isnarrow: true
 layout: post
 categories:
   - animation

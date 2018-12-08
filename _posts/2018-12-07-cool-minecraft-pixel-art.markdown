@@ -2,8 +2,6 @@
 splash:
   image: /uploads/2018-12-08/pixelart_1544294882776.jpg
   ishidden: true
-disablePixelatedRendering: true
-ismedium: true
 layout: post
 categories:
   - character
