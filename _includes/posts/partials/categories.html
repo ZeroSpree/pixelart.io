@@ -1,5 +1,5 @@
 {%- if post.categories != empty -%}
-    <ul class="flex flex--wrap flex--center">
+    <ul class="flex flex--wrap post__categories {{ include.align | default: '' }}">
         {%- for section in site.sections -%}
             {%- if post.categories contains section.slug and section.unlisted != true -%}
                 <li>
