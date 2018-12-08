@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var git = require('gulp-git');
 var runSequence = require('run-sequence');
-var run = require('gulp-run');
 
 module.exports = function() {
 
@@ -11,6 +10,13 @@ module.exports = function() {
 
         callback();
       });
+    });
+
+    gulp.task('git:status', function(callback) {
+        git.status({}, function (err, stdout) {
+            if (err) throw err;
+            callback();
+          });
     });
 
     gulp.task('git:add', function(callback) {
@@ -26,12 +32,12 @@ module.exports = function() {
     gulp.task('git:push', function(callback){
         git.push('origin', 'master', function (err) {
             if (err) throw err;
-            callback();
         });
     });
 
     gulp.task('git:publish', function() {
         runSequence(
+            'git:status', 
             'git:add', 
             'git:commit', 
             'git:push');
