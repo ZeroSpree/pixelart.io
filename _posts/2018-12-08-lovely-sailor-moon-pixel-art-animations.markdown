@@ -1,9 +1,10 @@
 ---
 splash:
   image: /uploads/2018-12-08/pixelart_1544285133209.gif
-  credits: 'Jasmine-Kao'
+  credits: Jasmine-Kao
   creditsurl: 'https://www.deviantart.com/jasmine-kao'
   ishidden: true
+  contain: true
 layout: post
 categories:
   - animation
