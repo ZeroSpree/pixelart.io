@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var git = require('gulp-git');
 var runSequence = require('run-sequence');
+var run = require('gulp-run');
 
 module.exports = function() {
 
@@ -31,7 +32,6 @@ module.exports = function() {
 
     gulp.task('git:publish', function() {
         runSequence(
-            'build', 
             'git:add', 
             'git:commit', 
             'git:push');
