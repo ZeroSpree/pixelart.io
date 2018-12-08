@@ -2,7 +2,9 @@
 
 <article class="card {{ include.sizes | default: 'col-12 col-md-6 col-lg-4' }} {{ postClasses | normalize_whitespace }}">
     <a href="{{ postURL }}" class="card__anchor">
-        <div class="ar ar--1-1 {{ postSplashContain }}" {{ postSplashBgLazy }}></div>
+        <div class="card__image">
+            <div class="ar ar--1-1 {{ postSplashContain }}" {{ postSplashBgLazy }}></div>
+        </div>
         <h3 class="card__title">{{ postTitle }}</h3>
     </a>
 
