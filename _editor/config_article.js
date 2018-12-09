@@ -10,6 +10,7 @@ var _Fields = [
     placeholder: 'Add a Subheadline...'
 },
 */
+
 // Image size settings
 {
     name: 'disablePixelatedRendering',
