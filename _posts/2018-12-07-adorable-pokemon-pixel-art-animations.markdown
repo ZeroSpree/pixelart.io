@@ -4,7 +4,8 @@ splash:
   credits: 'Guilherme Pedrosa'
   creditsurl: 'https://www.behance.net/guilhermepca'
   ishidden: false
-subtitle: '<br>'
+  bgcolor: '#f49bc5'
+  contain: true
 layout: post
 categories:
   - animation
@@ -12,6 +13,7 @@ categories:
   - character
   - pokemon
 date: '2018-12-07T12:46:09'
+subtitle: '<br>'
 title: '8 Adorable Pokemon Pixel Art Animations'
 
 ---

@@ -12,6 +12,17 @@
     }
   }
 
+  .row {
+    > :first-child {
+      max-width: 900px;
+    }
+
+    > :last-child {
+      width: 300px;
+      flex: 0 0 auto;
+    }
+  }
+
   /* Display Permalink */
   .ee__article-permalink {
     height: 24px;
@@ -67,10 +78,19 @@
   figure {
     position: relative;
     display: block;
+    background: #F9FBFE;
 
     img {
       display: block;
       cursor: url("/svg/trash-2-red.svg"), auto;
+      margin: 0 auto;
+      image-rendering: optimizeSpeed;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: -o-crisp-edges;
+      image-rendering: -o-pixelated;
+      image-rendering: pixelated;
+      -ms-interpolation-mode: nearest-neighbor;
 
       &:hover {
         opacity: .2;
