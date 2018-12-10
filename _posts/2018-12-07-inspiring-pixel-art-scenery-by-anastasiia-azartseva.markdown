@@ -3,7 +3,6 @@ splash:
   image: /uploads/2018-12-07/pixelart_1544194397694.png
   credits: 'Anastasiia Azartseva'
   creditsurl: 'https://www.deviantart.com/forheksed'
-ismedium: true
 layout: post
 categories:
   - scenery

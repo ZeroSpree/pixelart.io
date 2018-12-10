@@ -5,6 +5,7 @@
   margin-left: 200px;
   margin-right: auto;
   max-width: $site-max-width;
+  padding-bottom: 32px;
 
   @each $name, $size in $site-gutter {
     @include mq($name) {

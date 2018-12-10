@@ -3,7 +3,7 @@
         <h3>Hero image</h3>
         <template v-if="editor.splash.image">
             <!-- Display Hero -->
-            <figure >
+            <figure :style="'background-color: '+editor.splash.bgcolor">
                 <img :src="editor.splash.image" data-object="splash" data-key="image" />
             </figure>
         </template>
@@ -42,6 +42,11 @@
             <div class="ee__module field field-text">
                 <h3>Hero Credits Link</h3>
                 <input type="text" placeholder="http://example.com" v-model="editor.splash.creditsurl" />
+            </div>
+
+            <div class="ee__module field field-text">
+                <h3>Background Color</h3>
+                <input type="text" placeholder="#F5A970" v-model="editor.splash.bgcolor" />
             </div>
 
             <div class="field field-checkbox">

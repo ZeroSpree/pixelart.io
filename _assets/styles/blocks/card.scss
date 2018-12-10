@@ -19,6 +19,8 @@
     position: relative;
     top: 0;
     transition: top .15s linear;
+    border-radius: 15px;
+    overflow: hidden;
   }
 
   .ar {
@@ -26,12 +28,27 @@
     opacity: 0;
     transition: opacity .15s linear;
 
-    &.is-contain {
-      background-size: contain;
-    }
-
     &.b-loaded {
       opacity: 1;
+    }
+  }
+
+  &.is-contain {
+    .ar {
+      background-size: contain;
+      box-shadow: none;
+      background-color: transparent;
+    }
+
+    .card__image {
+      padding: 20px;
+    }
+  }
+
+  &.has-bgcolor {
+    .ar {
+      background-color: transparent;
+      box-shadow: none;
     }
   }
 

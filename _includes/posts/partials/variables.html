@@ -55,6 +55,12 @@
     {% if post.disablePixelatedRendering %}
         is--disablePixelatedRendering
     {% endif %}
+    {%- if post.splash.contain -%}
+        is-contain
+    {%- endif -%}
+    {% if post.splash.bgcolor %}
+        has-bgcolor
+    {% endif %}
     {% for category in post.categories %}
         is--{{category}}
     {% endfor %}
@@ -90,12 +96,12 @@
 
 
 {%- comment -%}
-@var: postSplashContain
-@type: String, flag
-@returns: 'is-contain'
+@var: postSplashBgColor
+@type: String, styles
+@returns: 'style="background-color: red;"'
 {%- endcomment -%}
-{%- capture postSplashContain -%}
-    {%- if post.splash.contain -%}is-contain{%- endif -%}
+{%- capture postSplashBgColor -%}
+    {%- if post.splash.bgcolor -%}style="background-color:{{ post.splash.bgcolor }}"{%- endif -%}
 {%- endcapture -%}
 
 

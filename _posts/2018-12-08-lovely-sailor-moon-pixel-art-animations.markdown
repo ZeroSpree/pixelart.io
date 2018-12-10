@@ -5,6 +5,8 @@ splash:
   creditsurl: 'https://www.deviantart.com/jasmine-kao'
   ishidden: true
   contain: true
+  bgcolor: '#7981D5'
+isnarrow: true
 layout: post
 categories:
   - animation
