@@ -45,6 +45,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0">
 
+
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon.png" | absolute_url }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon32x32.png" | absolute_url }}" />
+    <link rel="icon" sizes="64x64" href="{{ "favicon64x64.png" | absolute_url }}" />
+    <link rel="icon" sizes="128x128" href="{{ "favicon128x128.png" | absolute_url }}" />
+    <link rel="icon" sizes="192x192" href="{{ "favicon192x192.png" | absolute_url }}" />
+
+    <link rel="shortcut icon" href="{{ "favicon.png" | absolute_url }}" />
+
     {%- if site.theme_color -%}
     <meta name="theme-color" content="{{ site.theme_color }}">
     <meta name="msapplication-navbutton-color" content="{{ site.theme_color }}">
@@ -84,6 +93,5 @@
     {%- endif -%}
 
     <link rel="canonical" href="{{ META_URL }}">
-    <link rel="shortcut icon" href="{{ "favicon.ico" | absolute_url }}" />
 
 
