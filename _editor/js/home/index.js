@@ -1,4 +1,4 @@
-var limit = 15;
+var limit = 999;
 
 var vm = new Vue({
     el    : '#app',
