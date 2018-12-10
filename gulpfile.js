@@ -60,7 +60,7 @@ gulp.task('build:styles', ['build:styles:prod'], function() {
 /*
  * Build scripts
  */
-var scripts = [paths.jsFiles + '/lib/zepto.min.js', paths.jsFiles + '/lib/blazy.min.js', paths.jsFilesGlob];
+var scripts = [paths.jsFiles + '/lib/blazy.min.js', paths.jsFilesGlob];
 
 gulp.task('build:scripts:prod', function() {
     return gulp.src(scripts)

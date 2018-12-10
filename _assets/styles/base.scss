@@ -59,3 +59,11 @@ main {
   }
 }
 
+
+/* Edge only */
+@supports (-ms-ime-align:auto) {
+    /* Edge has no space-evenly for flex, only for grid */
+    .flex--space-evenly {
+        justify-content: space-around;
+    }
+}
