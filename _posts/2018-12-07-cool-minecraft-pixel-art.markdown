@@ -2,6 +2,7 @@
 splash:
   image: /uploads/2018-12-08/pixelart_1544294882776.jpg
   ishidden: true
+  contain: false
 disablePixelatedRendering: true
 ismedium: true
 layout: post
