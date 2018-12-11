@@ -1,0 +1,13 @@
+---
+splash:
+  image: /uploads/2018-12-11/pixelart_1544488861837.jpg
+  credits: 'Joo JaeBum'
+  creditsurl: 'https://www.behance.net/joojaebum'
+layout: post
+categories:
+  - ideas
+date: '2018-12-11T02:35:41'
+title: '''Imagination'' Pixel Art Mural by Joo JaeBum'
+
+---
+<p>This awesome mural by artist <a href="https://www.behance.net/joojaebum" target="_blank">Joo JaeBum</a> has it's home in Seoul's Wework Location.</p><p><strong>Making of:</strong></p><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;1080&quot; height=&quot;1080&quot;&gt;&lt;/svg&gt;" width="1080" height="1080" data-src="/uploads/2018-12-11/pixelart_1544488701805.jpg"></figure><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;1080&quot; height=&quot;1080&quot;&gt;&lt;/svg&gt;" width="1080" height="1080" data-src="/uploads/2018-12-11/pixelart_1544488723035.jpg"></figure><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;1080&quot; height=&quot;1080&quot;&gt;&lt;/svg&gt;" width="1080" height="1080" data-src="/uploads/2018-12-11/pixelart_1544488741193.jpg"></figure><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;1080&quot; height=&quot;1080&quot;&gt;&lt;/svg&gt;" width="1080" height="1080" data-src="/uploads/2018-12-11/pixelart_1544488758566.jpg"></figure><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;1080&quot; height=&quot;1080&quot;&gt;&lt;/svg&gt;" width="1080" height="1080" data-src="/uploads/2018-12-11/pixelart_1544488768711.jpg"></figure><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;1080&quot; height=&quot;1080&quot;&gt;&lt;/svg&gt;" width="1080" height="1080" data-src="/uploads/2018-12-11/pixelart_1544488781977.jpg"></figure><figure contenteditable="false"><img src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;1400&quot; height=&quot;959&quot;&gt;&lt;/svg&gt;" width="1400" height="959" data-src="/uploads/2018-12-11/pixelart_1544488847459.jpg"></figure>
