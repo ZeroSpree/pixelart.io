@@ -8,7 +8,7 @@ module.exports = {
      * @returns: array | ['fullpath/file.ext']
      * Used to return a list of files from a directory
      */
-    getFiles : function (dir, files_) {
+    getFiles : function (dir, ext, files_) {
         files_ = files_ || [];
         var files = fs.readdirSync(dir);
 
@@ -24,7 +24,14 @@ module.exports = {
             if (fs.statSync(name).isDirectory()) {
                 this.getFiles(name, files_);
             } else {
-                files_.push(name);
+                if (ext) {
+                    // filter files if extension is set
+                    if (name.substr(ext.length * -1) == ext) {
+                        files_.push(name);
+                    }
+                } else {
+                    files_.push(name);
+                }
             }
         }
 
