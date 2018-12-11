@@ -1,42 +1,42 @@
-var limit = 999;
+var limit = 50;
 
 var vm = new Vue({
-    el    : '#app',
-    data  : {
+    el : '#app',
+    data : {
         'posts' : [],
         'poststoload' : []
     },
     methods : {
-        loadmore : function (event) {
+        loadmore : function(event) {
             loadArticles();
         }
     }
 });
 
-function loadArticles () {
-    for (var article in vm.poststoload) {
-        var path = vm.poststoload[article];
+function loadArticles() {
+    var paginatedPosts = vm.poststoload.splice(0, limit);
 
-        if (article < limit) {
-            $.post(config.routes.readyaml+'?path='+path, function (res) {
-                var path = res.path;
-                var content = res.content;
+    $.post(config.routes.readyaml + '?path=' + paginatedPosts, function(res) {
 
-                content['path'] = path;
+        for (var article in res) {
+            var thisArticle = res[article];
+            var content = thisArticle.content;
+            content['path'] = thisArticle.path;
 
-                vm.posts.push(content);
-                vm.posts.sort( utils.sortByProperty('date', 'desc') );
-
-                var index = vm.poststoload.indexOf(path);
-                if (index !== -1) vm.poststoload.splice(index, 1);
-            });
+            vm.posts.push(content);
+            vm.posts.sort(utils.sortByProperty('date', 'desc'));
         }
-    }
+
+    });
 }
 
-$.get(config.routes.listing+'?path='+config.postsDir, function (data) {
+// Get an array of all markdown posts in the _posts directory
+$.get(config.routes.listing + '?path=' + config.postsDir + '&ext=markdown', function(data) {
     vm.poststoload = data;
+
+    // load first articles batch
     loadArticles();
 });
 
 $('.sidebar__nav a[href="/"]').addClass('is--active');
+

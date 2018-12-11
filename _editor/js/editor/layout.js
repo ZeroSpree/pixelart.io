@@ -3,7 +3,7 @@
  */
 
 // Get available layouts
-$.get(config.routes.listing+'?path='+config.layoutsDir, function (data) {
+$.get(config.routes.listing+'?path='+config.layoutsDir+'&ext=html', function (data) {
     for ( var path in data ) {
         var layoutName = utils.sanitizeFilename( data[path] );
 

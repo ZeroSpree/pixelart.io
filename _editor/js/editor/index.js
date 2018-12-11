@@ -4,50 +4,49 @@ var _Layouts = [];
 
 var _Extra = {
     'slug' : _Slug,
-    'permalink': '',
+    'permalink' : '',
     'isCustomSlug' : false
 }
 
 // Set default reactive data
 var _Data = {
-    'splash': {
-        'image': false
+    'splash' : {
+        'image' : false
     },
-    '__content': ''
+    '__content' : ''
 };
 
 // Add Custom Fields
 processCustomFields(_Fields, _Data);
 
 // Add Article default data
-if ( utils.isArticleEditor() ) {
-    _Data.layout     = 'post',
-    _Data.categories = [];
-    _Data.date       = utils.jekyllTime();
-    _Data.permalink  = '';
+if (utils.isArticleEditor()) {
+    _Data.layout = 'post', _Data.categories = [];
+    _Data.date = utils.jekyllTime();
+    _Data.permalink = '';
 }
 
 // Add Sections default data
-if ( utils.isSectionEditor() ) {
+if (utils.isSectionEditor()) {
     _Data.layout = 'section';
     _Data.parent = '';
 
     // Add order
-    $.get(config.routes.listing+'?path='+config.sectionsDir, function (data) {
+    $.get(config.routes.listing + '?path=' + config.sectionsDir + '&ext=markdown', function(data) {
         _Data.order = data.length + 1;
     });
 }
 
 var vm = new Vue({
-    el    : '#editor',
-    data  : {
-        'editor'   : _Data,
+    el : '#editor',
+    data : {
+        'editor' : _Data,
         'sections' : _Sections,
-        'layouts'  : _Layouts,
-        'extra'    : _Extra
+        'layouts' : _Layouts,
+        'extra' : _Extra
     },
     methods : {
-        headlineHandler : function (event) {
+        headlineHandler : function(event) {
             var data = this._data,
                 $t = $(event.target),
                 key = $t.parents('[data-name]').first().attr('data-name');
@@ -56,62 +55,63 @@ var vm = new Vue({
             this._data.editor[key] = $t.text().trim();
 
             // Autofill slug
-            if ( !data.extra.isCustomSlug ) {
-                data.extra.permalink = utils.sanitizeSlug( $('[data-name="title"]').text() );
+            if (!data.extra.isCustomSlug) {
+                data.extra.permalink = utils.sanitizeSlug($('[data-name="title"]').text());
             }
         },
-        textTrim : function (event) {
+        textTrim : function(event) {
             var $t = $(event.target),
                 key = $t.parents('[data-name]').first().attr('data-name');
 
             this._data.editor[key] = $t.text().trim();
         },
-        htmlTrim : function (event) {
+        htmlTrim : function(event) {
             var $t = $(event.target),
                 key = $t.parents('[data-name]').first().attr('data-name');
 
             this._data.editor[key] = $t.html().trim();
         },
-        sanitizeSlug : function (event) {
-            this._data.extra.permalink = utils.sanitizeSlug( $(event.target).val() );
+        sanitizeSlug : function(event) {
+            this._data.extra.permalink = utils.sanitizeSlug($(event.target).val());
         },
-        headlineSlugHandler : function (event) {
+        headlineSlugHandler : function(event) {
             var data = this._data;
 
-            if ( !data.extra.isCustomSlug ) {
-                data.extra.permalink = utils.sanitizeSlug( $('[data-name="title"]').text() );
+            if (!data.extra.isCustomSlug) {
+                data.extra.permalink = utils.sanitizeSlug($('[data-name="title"]').text());
             }
         },
-        headlineHandler : function (event) {
+        headlineHandler : function(event) {
             var data = this._data,
-                $t   = $(event.target),
-                key  = $t.parents('[data-name]').first().attr('data-name'),
+                $t = $(event.target),
+                key = $t.parents('[data-name]').first().attr('data-name'),
                 trimmedText = $t.text().trim();
 
             $t.html(trimmedText);
             this._data.editor[key] = trimmedText;
 
-            if ( !data.extra.isCustomSlug ) {
-                data.extra.permalink = utils.sanitizeSlug( trimmedText );
+            if (!data.extra.isCustomSlug) {
+                data.extra.permalink = utils.sanitizeSlug(trimmedText);
             }
         }
     }
 });
 
 var quill = new Quill('#editor-body', {
-    placeholder: 'Compose an epic...',
-    theme: 'snow',
-    modules: {
-        toolbar: '#quilljs-toolbar'
+    placeholder : 'Compose an epic...',
+    theme : 'snow',
+    modules : {
+        toolbar : '#quilljs-toolbar'
     }
 });
 
 // Edit
 function edit() {
-    if (!_Slug.length) return;
+    if (!_Slug.length)
+        return;
 
-    $.post(config.routes.readyaml+'?path='+decodeURI(_Slug), function (res) {
-        var data = res.content;
+    $.post(config.routes.readyaml + '?path=' + decodeURI(_Slug), function(res) {
+        var data = res[0].content;
 
         // Populate Vue _Data with article info
         for (var attrname in data) {
@@ -119,8 +119,7 @@ function edit() {
         }
 
         // Populate Quill editor with article contents
-        $('.ql-editor').html( $.trim(_Data.__content) );
-
+        $('.ql-editor').html($.trim(_Data.__content));
 
         // Revert the transformations from utils.htmlSanitize
 
@@ -129,7 +128,7 @@ function edit() {
 
         // Load the lazy images
         var $images = $('.ql-editor').find('img');
-        $.each($images, function () {
+        $.each($images, function() {
             var $t = $(this),
                 src = $t.attr('data-src');
 
