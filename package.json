@@ -16,7 +16,7 @@
     "express-fileupload": "^1.0.0",
     "express-nunjucks": "^2.2.3",
     "fs-extra": "^7.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
